@@ -1,0 +1,232 @@
+header:
+  - titles:
+      # @start locale config
+      en      : &EN       Home
+      ko      : &KO       홈
+      # @end locale config
+    url:        /index.html
+
+  - titles:
+      # @start locale config
+      en      : &EN       Notes
+      ko      : &KO       노트
+      # @end locale config
+    url:        /notes/kr/notes-home
+    key:        notes
+
+  # - title:      Docs
+  #   url:        /docs/en/quick-start
+  #   key:        quick-start
+  # - title:      Samples
+  #   url:        /samples.html
+  #   key:        samples
+  - title:      Archive
+    url:        /archive.html
+  - title:      About
+    url:        /about.html
+  - title:      GitHub
+    url:        https://github.com/Radical-Edward-IV
+
+notes-kr:
+  - title:      Notes
+    children:
+      - title:  Notes Home
+        url:    /notes/kr/notes-home
+  - title:      SQL 개발자
+    children:
+      - title:  1. 데이터 모델링의 이해
+        url:    /notes/kr/sql-developer/chapter-01
+      - title:  2. 데이터 모델과 SQL
+        url:    /notes/kr/sql-developer/chapter-02
+      - title:  3. SQL 기본
+        url:    /notes/kr/sql-developer/chapter-03
+      - title:  4. SQL 활용
+        url:    /notes/kr/sql-developer/chapter-04
+      - title:  5. 관리 구문
+        url:    /notes/kr/sql-developer/chapter-05
+  - title:      SQL 전문가
+    children:
+      - title:  1.1 데이터 모델링의 이해
+        url:    /notes/kr/sql-professional/chapter-01-01
+      - title:  1.2 엔터티
+        url:    /notes/kr/sql-professional/chapter-01-02
+      - title:  1.3 속성
+        url:    /notes/kr/sql-professional/chapter-01-03
+      - title:  1.4 관계
+        url:    /notes/kr/sql-professional/chapter-01-04
+      - title:  1.5 식별자
+        url:    /notes/kr/sql-professional/chapter-01-05
+      - title:  2.1 정규화
+        url:    /notes/kr/sql-professional/chapter-02-01
+      - title:  2.2 관계와 조인
+        url:    /notes/kr/sql-professional/chapter-02-02
+      - title:  2.3 모델이 표현하는 트랜잭션
+        url:    /notes/kr/sql-professional/chapter-02-03
+      - title:  2.4 NULL 속성
+        url:    /notes/kr/sql-professional/chapter-02-04
+      - title:  2.5 본질식별자와 인조식별자
+        url:    /notes/kr/sql-professional/chapter-02-05
+  - title:      리눅스마스터
+    children:
+      - title:  1. 리눅스의 이해
+        url:    /notes/kr/linux-master/level-2-chapter-01
+      - title:  2. 리눅스의 설치
+        url:    /notes/kr/linux-master/level-2-chapter-02
+      - title:  3. 기본 명령어
+        url:    /notes/kr/linux-master/level-2-chapter-03
+  - title:      정보처리기사
+    children:
+      - title:  1. 요구사항 분석
+        url:    /notes/kr/info-processing-engineer/chapter-01
+      - title:  2. 화면 설계
+        url:    /notes/kr/info-processing-engineer/chapter-02
+      - title:  3. 데이터 입출력 구현
+        url:    /notes/kr/info-processing-engineer/chapter-03
+      - title:  4. 통합 구현
+        url:    /notes/kr/info-processing-engineer/chapter-04
+      - title:  5. 인터페이스 구현
+        url:    /notes/kr/info-processing-engineer/chapter-05
+      - title:  6. 프로그래밍 언어 활용
+        url:    /notes/kr/info-processing-engineer/chapter-06
+      - title:  7. SQL 응용
+        url:    /notes/kr/info-processing-engineer/chapter-07
+      - title:  8. 서버 프로그램 구현
+        url:    /notes/kr/info-processing-engineer/chapter-08
+      - title:  9. 소프트웨어 개발 보안 구축
+        url:    /notes/kr/info-processing-engineer/chapter-09
+      - title:  10. 애플리케이션 테스트 관리
+        url:    /notes/kr/info-processing-engineer/chapter-10
+      - title:  11. 응용 SW 기초 기술 활용
+        url:    /notes/kr/info-processing-engineer/chapter-11
+      - title:  12. 제품 소프트웨어 패키징
+        url:    /notes/kr/info-processing-engineer/chapter-12
+
+docs-en:
+  - title:      정보처리기사
+    children:
+      - title:  정보처리기사-01
+        url:    /study/kr/info-processing-enginner
+  - title:      Start
+    children:
+      - title:  Quick Start
+        url:    /docs/en/1.1-quick-start
+      - title:  Structure
+        url:    /docs/en/structure
+      - title:  Update from 1.x to 2.x
+        url:    /docs/en/update-from-1-to-2
+  - title:      Customization
+    children:
+      - title:  Configuration
+        url:    /docs/en/configuration
+      - title:  Navigation
+        url:    /docs/en/navigation
+      - title:  Layouts
+        url:    /docs/en/layouts
+      - title:  Logo and Favicon
+        url:    /docs/en/logo-and-favicon
+      - title:  Authors
+        url:    /docs/en/authors
+      - title:  Internationalization
+        url:    /docs/en/i18n
+  - title:      Content
+    children:
+      - title:  Writing Posts
+        url:    /docs/en/writing-posts
+      - title:  Additional Styles
+        url:    /docs/en/additional-styles
+      - title:  Extensions
+        url:    /docs/en/extensions
+      - title:  Markdown Enhancements
+        url:    /docs/en/markdown-enhancements
+  - title:      Extra
+    children:
+      - title:  Spacing
+        url:    /docs/en/spacing
+      - title:  Grid
+        url:    /docs/en/grid
+      - title:  Icons
+        url:    /docs/en/icons
+      - title:  Image
+        url:    /docs/en/image
+      - title:  Button
+        url:    /docs/en/button
+      - title:  Item
+        url:    /docs/en/item
+      - title:  Card
+        url:    /docs/en/card
+      - title:  Hero
+        url:    /docs/en/hero
+      - title:  Swiper
+        url:    /docs/en/swiper
+  - title:      Languages
+    children:
+      - title:  中文
+        url:    /docs/zh/quick-start
+
+
+docs-zh:
+  - title:      开始
+    children:
+      - title:  快速开始
+        url:    /docs/zh/quick-start
+      - title:  从 1.x 升级到 2.x
+        url:    /docs/zh/update-from-1-to-2
+  - title:      定制
+    children:
+      - title:  配置
+        url:    /docs/zh/configuration
+      - title:  导航栏
+        url:    /docs/zh/navigation
+      - title:  布局
+        url:    /docs/zh/layouts
+      - title:  Logo 和 Favicon
+        url:    /docs/zh/logo-and-favicon
+      - title:  作者
+        url:    /docs/zh/authors
+      - title:  国际化
+        url:    /docs/zh/i18n
+  - title:      内容
+    children:
+      - title:  撰写博客
+        url:    /docs/zh/writing-posts
+      - title:  附加样式
+        url:    /docs/zh/additional-styles
+      - title:  扩展
+        url:    /docs/zh/extensions
+      - title:  Markdown 增强
+        url:    /docs/zh/markdown-enhancements
+  - title:      其他语言
+    children:
+      - title:  English
+        url:    /docs/en/quick-start
+
+layouts:
+  - title: Layouts
+    children:
+      - title:  Single
+        url:    /page/single.html
+      - title:  Aside
+        url:    /page/aside.html
+      - title:  Sidebar
+        url:    /page/sidebar.html
+
+      - title:  Sidebar (Aside)
+        url:    /page/sidebar-aside.html
+      - title:  Article Header Overlay Background Fill
+        url:    /page/article-header-overlay-background-fill.html
+      - title:  Article Header Overlay Background Image
+        url:    /page/article-header-overlay-background-image.html
+
+      - title:  Article Header Image
+        url:    /page/article-header-cover-image.html
+      - title:  Article Header Overlay Background Image (Customized Header Background)
+        url:    /page/article-header-overlay-background-image-header-background.html
+      - title:  Article Header Image (Customized Header Background)
+        url:    /page/article-header-cover-image-header-background.html
+
+      - title:  Article Header Overlay Background Fill (Immersive + Translucent Header)
+        url:    /page/article-header-overlay-background-fill-immersive-translucent-header.html
+      - title:  Article Header Overlay Background Image (Immersive + Translucent Header)
+        url:    /page/article-header-overlay-background-image-immersive-translucent-header.html
+      - title:  Article Header Image (Immersive + Translucent Header)
+        url:    /page/article-header-cover-image-immersive-translucent-header.html
