@@ -1,11 +1,8 @@
 header:
-  - title:      About Me
-    url:        /about.html
-
   - titles:
       # @start locale config
-      en      : &EN       Thinking
-      ko      : &KO       Thinking
+      en      : &EN       Home
+      ko      : &KO       홈
       # @end locale config
     url:        /index.html
 
@@ -16,15 +13,14 @@ header:
       # @end locale config
     url:        /notes/kr/notes-home
     key:        notes
-
-  # - title:      Docs
-  #   url:        /docs/en/quick-start
-  #   key:        quick-start
   # - title:      Samples
   #   url:        /samples.html
   #   key:        samples
   - title:      Archive
     url:        /archive.html
+
+  - title:      About Me
+    url:        /about.html
 
   - title:      GitHub
     url:        https://github.com/eileensong
