@@ -29,6 +29,10 @@ notes-kr:
     children:
       - title:  Notes Home
         url:    /notes/kr/notes-home
+  - title:      기본 통계
+    children:
+      - title:  1. 작성중..
+        url:    /notes/kr/statistics/Ch01_       
   - title:      ML/DL을 위한 알고리즘
     children:
       - title:  0. background
