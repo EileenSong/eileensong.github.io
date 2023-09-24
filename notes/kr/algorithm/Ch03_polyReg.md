@@ -16,3 +16,7 @@ mathjax: true
 
 # 다항 회귀 분석(Polynominal Regression)
 
+
+<br><br><br>
+끝🙂
+<br><br><br>

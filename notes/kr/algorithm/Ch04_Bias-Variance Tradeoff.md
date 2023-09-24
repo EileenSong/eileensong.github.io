@@ -18,14 +18,13 @@ mathjax: true
 # 편향 분산 절충(Bias-Variance Tradeoff)
 <br>
 
-많이 본 그림...
-
-
-![Alt text](img/bvt1.png)
+많이 본 그림이다... 무엇이 가장 좋은 걸까? bias와 variance는 무슨 의미일까?
 
 ![Alt text](img/bvt1.png)
 
-???????????????????????
+![Alt text](img/bvt2.png)
+
+
 
 <br>
 
