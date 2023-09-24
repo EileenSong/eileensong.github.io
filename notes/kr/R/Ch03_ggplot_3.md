@@ -42,6 +42,7 @@ mathjax: true
 
 ## Data Intrdoction : ‘tips’ in R
 <br>
+미국(?)의 한 waiter가 일하던 restaurant 에서 수개월 동안 일을 하면서 tip 받은 것과 관련하여 모은 자료가 R에 내장되어 있다. 자세한 설명과 데이터 불러오기는 이전 포스팅 참고!
 
 >  [ggplot2](/notes/kr/R/Ch02_ggplot_2.md) <sub>👈 클릭</sub>
 
@@ -83,7 +84,7 @@ Dinner  Lunch
 ggplot(tips,aes(time))+geom_bar()
 ```
 
-![geom_bar()](img/ggplot_19.png)
+![geom_bar()](img/ggplot_19.PNG)
 
 
 알파벳 순으로 디너가 먼저이기 때문에, 알파벳 순서대로 나온다.
@@ -97,11 +98,11 @@ ggplot(tips,aes(day))+geom_bar()
 ```
 
 
-![geom_bar()](img/ggplot_20.png)
+![geom_bar()](img/ggplot_20.PNG)
 
 
 
-time과 day를 살펴보니 대충 이 레스토랑은 주말에, 저녁에 사람이 많은 것으로 확인된다. 하지만 자료의 특성상 웨이터가 수집한 것이므로, 이 사람의 근무시간도 생각해보아야 한다(알 수 없지만 추측). 주말엔 풀타임일 수도 있고, smoke로 보면 non-smoke테이블에 더 많이 서빙을 했다. smoke 존이 적을 수도 있는 것이고, 웨이터가 non-smoke존을 포커스로 서빙하는 사람일 수도 있다. 즉, **자료가 얻어진 특성을 이해하는 것이 중요하다**
+time과 day를 살펴보니 대충 이 레스토랑은 주말에, 저녁에 사람이 많은 것으로 확인된다. 하지만 자료의 특성상 웨이터가 수집한 것이므로, 이 사람의 근무시간도 생각해보아야 한다(알 수 없지만 추측). 주말엔 풀타임일 수도 있고, smoke로 보면 non-smoke테이블에 더 많이 서빙을 했다. smoke 존이 적을 수도 있는 것이고, 웨이터가 non-smoke존을 포커스로 서빙하는 사람일 수도 있다. 즉, 💡**자료가 얻어진 특성을 이해하는 것이 중요하다**
 
 
 <br>
@@ -141,7 +142,7 @@ ggplot(TipsDay, aes(day, count)) + geom_bar(stat="identity")
 
 <br>
 
-![geom_bar()](img/ggplot_21.png)
+![geom_bar()](img/ggplot_21.PNG)
 
 <br>
 
@@ -191,7 +192,7 @@ ggplot(TipsDay,aes(x="", y=count, fill=day)) + geom_bar(stat="identity")
 x변수는 없고 fill에 day를 넣어주면, 각각의 요일이 차지하는 부분을 할당량별로 알 수 있다.
 
 
-![geom_pie()](img/ggplot_22.png)
+![geom_pie()](img/ggplot_22.PNG)
 
 
 x를 지정해주지 않았기 때문에 뭉뚱그려 나온다
@@ -207,7 +208,7 @@ ggplot(TipsDay,aes(x="", y=count, fill=day)) + geom_bar(stat="identity") + coord
 ```
 
 
-![coord_polar()](img/ggplot_23.png)
+![coord_polar()](img/ggplot_23.PNG)
 
 <br>
 
@@ -252,7 +253,7 @@ summary statistics이다. min, max, Q1, Q2, Q3를 가지고 상자를 그리고 
 ggplot(tips, aes(day,tip))+geom_point()
 ```
 
-![goem_point()](img/ggplot_24.png)
+![goem_point()](img/ggplot_24.PNG)
 
 
 간단한 분포를 파악할 수 있다. 하지만, 자료가 244개이고 연속분포이기 때문에 같은 수치의 경우 점들이 겹쳐서 찍혀보일 수도 있다. 이런 경우, 피해서 그리는 방법은 jitter겠다.
@@ -264,7 +265,7 @@ ggplot(tips, aes(day,tip))+geom_point()
 ggplot(tips, aes(day,tip))+geom_jitter()
 ```
 
-![geom_jitter()](img/ggplot_25.png)
+![geom_jitter()](img/ggplot_25.PNG)
 
 한 줄에 있던 것들을 흩어지게 하여 같은 tip에 대한 분포들을 자세히 볼 수 있다.
 
@@ -276,7 +277,7 @@ ggplot(tips, aes(day,tip))+geom_jitter()
 ```r
 ggplot(tips, aes(day,tip))+geom_boxplot()
 ```
-![geom_boxplot()](img/ggplot_26.png)
+![geom_boxplot()](img/ggplot_26.PNG)
 
 sunday가 중앙값이 젤 높고, thur이 낮고.. 등을 한 눈에 볼 수 있다.  outlier도 볼 수 있다
 
@@ -288,7 +289,7 @@ sunday가 중앙값이 젤 높고, thur이 낮고.. 등을 한 눈에 볼 수 �
 ggplot(tips, aes(day,tip))+geom_violin()
 ```
 
-![geom_violin()](img/ggplot_27.png)
+![geom_violin()](img/ggplot_27.PNG)
 
 각 자료의 위치와 분포를 확실하게 알 수 있다.
 
@@ -311,7 +312,7 @@ ggplot(tips, aes(day,tip))+geom_violin()+geom_boxplot(width=0.5)
 (width=0.5)를 써서 boxplot의 폭도 줄일 수 있다. 
 
 
-![geom_violin()+geom_boxplot()](img/ggplot_28.png)
+![geom_violin()+geom_boxplot()](img/ggplot_28.PNG)
 
 
 thur의 경우, 아랫부분에 제일 넓게 퍼져있지만 중앙값도 제일 낮은 것을 확인할 수 있다. 
