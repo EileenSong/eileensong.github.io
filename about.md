@@ -29,9 +29,11 @@ key: page-about
 
 <img src="" />
 
-
+![Alt text](assets/mstile-310x310.png)
 
 <h3 align="center">👨‍💻 Eileen HJ SONG 👨‍💻</h3>
+
+<br>
 
 <p align="center">
    📚 Data Scientist를 꿈꾸며 공부합니다🥊 
