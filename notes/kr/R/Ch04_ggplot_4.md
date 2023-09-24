@@ -1,7 +1,7 @@
 ---
 layout: article
 title: 3. ggplot2 범주형 변수
-permalink: /notes/kr/R/Ch03_ggplot_3
+permalink: /notes/kr/R/Ch04_ggplot_4
 key: notes
 sidebar:
   nav: notes-kr
