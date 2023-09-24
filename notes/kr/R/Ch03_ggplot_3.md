@@ -42,7 +42,6 @@ mathjax: true
 
 ## Data Intrdoction : ‘tips’ in R
 <br>
-@ -50,8 +26,6 @@ mathjax: true
 
 >  [ggplot2](/notes/kr/R/Ch02_ggplot_2.md) <sub>👈 클릭</sub>
 
@@ -51,7 +50,6 @@ mathjax: true
 <br>
 
 > 변수 설명
-@ -68,285 +42,44 @@ mathjax: true
 <br>
 
 
