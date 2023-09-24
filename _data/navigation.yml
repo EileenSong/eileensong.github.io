@@ -30,26 +30,29 @@ notes-kr:
     children:
       - title:  Notes Home
         url:    /notes/kr/notes-home
-  - title:      SQL 개발자
+  - title:      ML/DL을 위한 알고리즘
     children:
-      - title:  1. 데이터 모델링의 이해
-        url:    /notes/kr/sql-developer/chapter-01
-      - title:  2. 데이터 모델과 SQL
-        url:    /notes/kr/sql-developer/chapter-02
-      - title:  3. SQL 기본
-        url:    /notes/kr/sql-developer/chapter-03
-      - title:  4. SQL 활용
-        url:    /notes/kr/sql-developer/chapter-04
-      - title:  5. 관리 구문
-        url:    /notes/kr/sql-developer/chapter-05
-  - title:      SQL 전문가
+      - title:  0. background
+        url:    /notes/kr/algorithm/Ch00_basic
+      - title:  1. 선형 회귀
+        url:    /notes/kr/algorithm/Ch01_linearReg
+      - title:   1-1. linear with R
+        url:    /notes/kr/algorithm/Ch01_linearReg_withR
+      - title:  2. 다항 회귀
+        url:    /notes/kr/algorithm/Ch02_multipleReg
+      - title:  3. 다항 회귀
+        url:    /notes/kr/algorithm/Ch03_polyReg
+      - title:  4. 편향 분산 트레이드오프
+        url:    /notes/kr/algorithm/Ch04_Bias-Variance-Tradeoff
+        
+  - title:      R Visualization
     children:
-      - title:  1.1 데이터 모델링의 이해
-        url:    /notes/kr/sql-professional/chapter-01-01
-      - title:  1.2 엔터티
-        url:    /notes/kr/sql-professional/chapter-01-02
-      - title:  1.3 속성
-        url:    /notes/kr/sql-professional/chapter-01-03
+      - title:  1. ggplot 기본 다루기
+        url:    /notes/kr/R/Ch01_ggplot_1
+      - title:  2. ggplot 연속변수
+        url:    /notes/kr/R/Ch02_ggplot_2
+      - title:  3. ggplot 범주형변수
+        url:    /notes/kr/R/Ch02_ggplot_3
 
 layouts:
   - title: Layouts
