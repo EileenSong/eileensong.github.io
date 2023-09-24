@@ -1,8 +1,11 @@
 header:
+  - title:      About Me
+    url:        /about.html
+
   - titles:
       # @start locale config
-      en      : &EN       Home
-      ko      : &KO       홈
+      en      : &EN       Thinking
+      ko      : &KO       Thinking
       # @end locale config
     url:        /index.html
 
@@ -22,10 +25,9 @@ header:
   #   key:        samples
   - title:      Archive
     url:        /archive.html
-  - title:      About
-    url:        /about.html
+
   - title:      GitHub
-    url:        https://github.com/Radical-Edward-IV
+    url:        https://github.com/eileensong
 
 notes-kr:
   - title:      Notes
