@@ -43,6 +43,9 @@ notes-kr:
         url:    /notes/kr/algorithm/Ch03_polyReg
       - title:  4. 편향 분산 트레이드오프
         url:    /notes/kr/algorithm/Ch04_Bias-Variance-Tradeoff
+      - title:  5. 로지스틱 회귀
+        url:    /notes/kr/algorithm/Ch05_Rogistic
+
         
   - title:      R Visualization
     children:

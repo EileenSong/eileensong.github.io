@@ -33,10 +33,10 @@ key: page-about
 <h3 align="center">👨‍💻 Eileen HJ SONG </h3>
 
 <p align="center">
-  <img src="assets/mstile-310x310.png" alt="Alt text" width="200" height="200">
+  <img src="assets/mstile-310x310.png" alt="Alt text" width="200" height="220">
 </p>
 
-</p>
+
 
 
 <br>

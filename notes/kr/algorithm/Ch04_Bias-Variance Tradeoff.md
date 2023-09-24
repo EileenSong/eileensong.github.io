@@ -18,7 +18,10 @@ mathjax: true
 # 편향 분산 절충(Bias-Variance Tradeoff)
 <br>
 
-많이 본 그림이다... 무엇이 가장 좋은 걸까? bias와 variance는 무슨 의미일까?
+많이 본 그림이다... 무엇이 가장 좋은 걸까? 물론 과녁 중간에 모든 점수를 쏜다면 젤 좋은게 아닐까! bias와 variance는 무슨 의미일까?
+
+<br>
+
 
 ![Alt text](img/bvt1.png)
 
@@ -79,10 +82,10 @@ mathjax: true
 
 ## Bias-Variance Tradeoff 그림으로 이해하기
 
-![Alt text](img/bvt_1.png)
+![Alt text](img/bvt1.png)
 
 
-무엇이 가장 이상적인 형태일까?
+다시 그림을 보자. 무엇이 가장 이상적인 형태일까?
 
 
 1. 1번 

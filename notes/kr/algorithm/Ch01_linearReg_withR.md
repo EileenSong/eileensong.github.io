@@ -16,7 +16,7 @@ mathjax: true
 *해당 포스팅은 'an introduction to statistical learning' 책의 연습문제를 R로 해석하며 공부한 것을 정리해두었습니다*
 
 
-# 3.7 Exercises
+# Linear_3.7 Exercises
 ## 4번
 
 ### Question
