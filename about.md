@@ -29,14 +29,14 @@ key: page-about
 
 <img src="" />
 
-![Alt text](assets/mstile-310x310.png)
 
-<h3 align="center">👨‍💻 Eileen HJ SONG 👨‍💻</h3>
+<h3 align="center">👨‍💻 Eileen HJ SONG </h3>
+<p align="center"> ![Alt text](assets/mstile-310x310.png)
 
 <br>
 
 <p align="center">
-   📚 Data Scientist를 꿈꾸며 공부합니다🥊 
+   📚 Data Scientist를 꿈꾸며 공부하고 있습니다 
 
 <br>
 <br>
@@ -84,9 +84,13 @@ key: page-about
 
 
 <div align="center">
-  <a href="https://hits.seeyoufarm.com"><img src="https://hits.seeyoufarm.com/api/count/incr/badge.svg?url=https%3A%2F%2Fgithub.com%2Feileensong&count_bg=%230067A3&title_bg=%230067A3&icon=postwoman.svg&icon_color=%23E7E7E7&title=Visitors&edge_flat=false"/></a>
+<!--
   <img src="https://img.shields.io/static/v1?message=LinkedIn&logo=linkedin&label=&color=0077B5&logoColor=white&labelColor=&style=for-the-badge" height="25" alt="linkedin logo"  />
+-->
+<!--
   <img src="https://img.shields.io/static/v1?message=Gmail&logo=gmail&label=&color=D14836&logoColor=white&labelColor=&style=for-the-badge" height="25" alt="gmail logo"  />
+-->
+  
 </div>
 
 <br>
