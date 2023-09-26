@@ -15,12 +15,16 @@ sidebar:
 
 
 ### 📖 다음과 같은 주제가 있습니다
->  [선형회귀](/notes/kr/algorithm/Ch01_linearReg.md) <sub>👈 클릭</sub>
-
->  [다중회귀](/notes/kr/algorithm/Ch02_multipleReg.md) <sub>👈 클릭</sub>
-
->  [다항회귀](/notes/kr/algorithm/Ch03_poly) <sub>👈 클릭</sub>
-
+```
+클릭하면 이동할 수 있습니다
+```
+>  [선형회귀](/notes/kr/algorithm/Ch01_linearReg.md) 
+>   [with R](/notes/kr/algorithm/Ch01_linearReg_withR.md)
+>  [다중회귀](/notes/kr/algorithm/Ch02_multipleReg.md) 
+>  [다항회귀](/notes/kr/algorithm/Ch03_poly) 
+>  [편향 분산 트레이드오프](/notes/kr/algorithm/Ch04_Bias-Variance-Tradeoff.md)
+>  [로지스틱 회귀](/notes/kr/algorithm/Ch05_Rogistic.md)
+>   [with R](/notes/kr/algorithm/Ch06_classfications_R.md)
 
 
 ### ✔️ 업로드 해야하는 것

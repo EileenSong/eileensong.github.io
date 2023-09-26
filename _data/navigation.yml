@@ -49,6 +49,8 @@ notes-kr:
         url:    /notes/kr/algorithm/Ch04_Bias-Variance-Tradeoff
       - title:  5. 로지스틱 회귀
         url:    /notes/kr/algorithm/Ch05_Rogistic
+      - title:  　5-1. 로지스틱 회귀 with R
+        url:    /notes/kr/algorithm/Ch06_classfications_R
 
         
   - title:      R Visualization

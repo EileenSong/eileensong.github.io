@@ -65,6 +65,7 @@ $$ \log\left(\frac{p(X)}{1-p(X)}\right) = \beta_0 + \beta_1 X $$
 
 
 
+
 <br>
 
 ## 2번
@@ -72,6 +73,8 @@ $$ \log\left(\frac{p(X)}{1-p(X)}\right) = \beta_0 + \beta_1 X $$
 <br>
 
 It was stated in the text that classifying an observation to the class for which (4.17) is largest is equivalent to classifying an observation to the class for which (4.18) is largest. Prove that this is the case. In other words, under the assumption that the observations in the kth class are drawn from a N(µk, σ2) distribution, the Bayes classifer assigns an obser
+
+
 
 
 
