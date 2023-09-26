@@ -19,7 +19,7 @@ sidebar:
 
 >  [다중회귀](/notes/kr/algorithm/Ch02_multipleReg.md) <sub>👈 클릭</sub>
 
->  [다항회귀](/notes/kr/algorithm/Ch03_polyReg.md) <sub>👈 클릭</sub>
+>  [다항회귀](/notes/kr/algorithm/Ch03_poly) <sub>👈 클릭</sub>
 
 
 

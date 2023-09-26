@@ -24,9 +24,58 @@ mathjax: true
  Using a little bit of algebra, prove that (4.2) is equivalent to (4.3). In other words, the logistic function representation and logit representation for the logistic regression model are quivalent.
 
 
+`정답`
+1. 로지스틱 함수 표현?
+ 로지스틱 함수는 앞서 보았듯, 주어진 입력 X에 대한 이벤트가 발생할 확률을 나타낸다. 즉, 그 결과는 0과 1 사이의 값이다. 그래서 시그모이드 함수로 표현하는 것을 보았다.
+
+`(4.2)`
+
+ $$ p(X) = \frac{e^{\beta_0 + \beta_1 X}}{1 + e^{\beta_0 + \beta_1 X}} $$
+
+
+2. 로짓 표현?
+ *로짓 표현은 확률을 로그 오즈로 변환한 것*으로, 모든 실수 값을 가질 수 있다. 로지스틱 회귀 분석에서는 로짓 표현을 사용하여 종속 변수와 독립 변수 간의 선형 관계를 설명할 수 있다.
+
+위의 함수를 아래와 같이도 표현할 수 있다.
+
+
+$$ \frac{p(X)}{1-p(X)} = e^{\beta_0 + \beta_1 X} $$
+
+
+
+여기서, 
+
+$$ \frac{p(X)}{1-p(X)} $$
+
+는 odds(공산)이라하며 항상 0과 무한대 사이의 값을 가진다. 
+
+
+여기서 양변에 로그를 취하면 아래와 같다.
+
+
+
+`(4.3)`
+
+$$ \log\left(\frac{p(X)}{1-p(X)}\right) = \beta_0 + \beta_1 X $$
+
+
+
+**따라서** 
+로지스틱 함수를 사용하여 로짓 표현을 만들 수 있고, 로짓 표현을 가지고 로지스틱 함수를 쓸 수 있기 때문에 4.2와 4.3은 같다고 할 수 있다. 로지스틱에서는 결과 해석이나 예측을 이것들을 활용해서 잘 할 수 있다고 한다...
+
+
+
+<br>
+
 ## 2번
 
+<br>
+
 It was stated in the text that classifying an observation to the class for which (4.17) is largest is equivalent to classifying an observation to the class for which (4.18) is largest. Prove that this is the case. In other words, under the assumption that the observations in the kth class are drawn from a N(µk, σ2) distribution, the Bayes classifer assigns an obser
+
+
+
+<br>
 
 ## 5번
 We now examine the diferences between LDA and QDA.
@@ -91,15 +140,15 @@ its median. You can compute the median using the median()
 function. Note you may fnd it helpful to use the data.frame()
 function to create a single data set containing both mpg01 and
 the other Auto variables.
-(b) Explore the data graphically in order to investigate the association between mpg01 and the other features. Which of the other
-features seem most likely to be useful in predicting mpg01? Scatterplots and boxplots may be useful tools to answer this question. Describe your fndings.
+(b) Explore the data graphically in order to investigate the association between mpg01 and the other features. Which of the other
+features seem most likely to be useful in predicting mpg01? Scatterplots and boxplots may be useful tools to answer this question. Describe your fndings.
 (c) Split the data into a training set and a test set.
 (d) Perform LDA on the training data in order to predict mpg01
 using the variables that seemed most associated with mpg01 in
 (b). What is the test error of the model obtained (e) Perform QDA on the training data in order to predict mpg01
 using the variables that seemed most associated with mpg01 in
 (b). What is the test error of the model obtained?
-(f) Perform logistic regression on the training data in order to predict mpg01 using the variables that seemed most associated with
+(f) Perform logistic regression on the training data in order to predict mpg01 using the variables that seemed most associated with
 mpg01 in (b). What is the test error of the model obtained?
 (g) Perform naive Bayes on the training data in order to predict
 mpg01 using the variables that seemed most associated with mpg01
@@ -112,7 +161,13 @@ Which value of K seems to perform the best on this data set
 ## 16번
 
 . Using the Boston data set, ft classifcation models in order to predict
-whether a given census tract has a crime rate above or below the median. Explore logistic regression, LDA, naive Bayes, and KNN models
+whether a given census tract has a crime rate above or below the median. Explore logistic regression, LDA, naive Bayes, and KNN models
 using various subsets of the predictors. Describe your fndings.
 Hint: You will have to create the response variable yourself, using the
 variables that are contained in the Boston data set
+
+
+
+<br><br><br>
+끝🙂
+<br><br><br>
