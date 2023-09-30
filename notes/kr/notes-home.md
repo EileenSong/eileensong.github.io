@@ -54,8 +54,11 @@ sidebar:
 
 > [5. ggplot 두 개의 범주형 변수](/R/Ch05_ggplot_5.md)
 
-> [6. ggplot 셋 이상의 범주형 변수](/R/Ch06_ggplot_6.md)
+> [6. ggplot 셋 이상의 변수](/R/Ch06_ggplot_6.md)
 
+> [7. ggplot 셋 이상의 범주형 변수](/R/Ch07_ggplot_7.md)
+
+> [8. 시계열 자료](/R/Ch08_ggplot_8.md)
 
 
 ### ✔️ 업로드 해야하는 것

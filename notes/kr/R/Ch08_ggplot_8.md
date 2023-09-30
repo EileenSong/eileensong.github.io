@@ -1,7 +1,7 @@
 ---
 layout: article
-title: 7. 셋 이상의 범주형 변수
-permalink: /notes/kr/R/Ch07_ggplot_7
+title: 8. 시계열 자료
+permalink: /notes/kr/R/Ch08_ggplot_8
 key: notes
 sidebar:
   nav: notes-kr
@@ -17,7 +17,7 @@ mathjax: true
 
 <br>
 
-# 셋 이상의 범주형 변수
+# 시계열 자료
 
 
 
