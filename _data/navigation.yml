@@ -67,6 +67,8 @@ notes-kr:
         url:    /notes/kr/R/Ch05_ggplot_5
       - title:  6. 세 개 이상의 범주형 변수
         url:    /notes/kr/R/Ch06_ggplot_6
+      - title:  7. 시계열 자료
+        url:    /notes/kr/R/Ch07_ggplot_7
 
 layouts:
   - title: Layouts

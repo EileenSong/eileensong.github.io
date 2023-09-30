@@ -1,6 +1,6 @@
 ---
 layout: article
-title: 5. 두 개 범주형 변수
+title: 5. 두 개의 범주형 변수
 permalink: /notes/kr/R/Ch05_ggplot_5
 key: notes
 sidebar:
@@ -54,8 +54,8 @@ Titanic 데이터의 1번째 변수(Class)를 모두 sum을 하라는 의미이�
 
 
 결과는 다음과 같다.
- 1st  2nd  3rd Crew 
 
+ 1st  2nd  3rd Crew 
 
  325  285  706  885 
 
@@ -75,7 +75,6 @@ apply(Titanic, 3, sum)
 ```
 Child Adult 
 
-
   109  2092
 
 
@@ -83,9 +82,7 @@ Child Adult
 apply(Titanic, 4, sum)
 ```
 
-
     No  Yes 
-
 
 1490  711
 
@@ -107,18 +104,13 @@ apply(Titanic, c(3,4), sum)
 
       Survived
 
-
 Class   No Yes
-
 
   1st  122 203
 
-
   2nd  167 118
 
-
   3rd  528 178
-
 
   Crew 673 212
 

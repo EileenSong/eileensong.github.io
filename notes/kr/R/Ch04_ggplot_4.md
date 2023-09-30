@@ -18,6 +18,7 @@ mathjax: true
 total bill과 tip의 관계를 알아보고자 한다.
 
 ```r
+ggplot(tips,aes(total_bill,tip))+geom_point()
 ```
 ![Alt text](img/ggplot_34.png)
 
@@ -37,17 +38,20 @@ ggplot(tips,aes(total_bill,tip))+geom_point()+geom_smooth()
 
 
 ![Alt text](img/ggplot_35.png)
+
+
 log(x)라인이며 전반적으로 증가하며 평균 선이 생긴다.
 이 평균 선을 둘러싼 회색 선은 standard error로, 주어진 자료가 많다면 에러가 적을 것이며 주어진 자료가 적다면 에러가 큰 모습을 띈다.
 
 geom_smooth()를 썼을 때, 콘솔에는
-`geom_smooth()` using method = 'loess' and formula = 'y ~ x'
+
+'geom_smooth()' using method = 'loess' and formula = 'y ~ x'
+
 이렇게 뜬다. loess는 default 메서드라는 의미이고, 어떤 방식으로 라인을 찾을지, 방법은 바꿀 수 있다.
 
 
 
 회귀 직선 lm을 추가하면, 다음과 같은 직선으로 선이 생긴다. 
-
 
 <br>
 
@@ -74,7 +78,9 @@ span의 값은 0에서 1 사이이고, span 값이 1에 가까울수록 더 부�
 어쨌든 다양한 span 값을 시도함으로써 데이터에 가장 잘 맞는 평활화 수준을 찾으면 된다.!
 
 
+
 > span default: 0.75
+
 
 
 
@@ -91,7 +97,10 @@ ggplot(tips,aes(total_bill,tip))+geom_point()+geom_smooth(method="lm", se=FALSE)
 
 
 
+
+
 `tip` 이런 옵션은 아래 코드로 보면 된다.
+
 
 ```r
 ?geom_smooth 

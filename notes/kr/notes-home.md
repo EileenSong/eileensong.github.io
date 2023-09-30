@@ -52,9 +52,9 @@ sidebar:
 
 > [4. ggplot 두 개의 연속 변수](/R/Ch04_ggplot_4.md)
 
-> [5. ggplot 두 개의 이상의 연속 변수들](/R/Ch05_ggplot_5.md)
+> [5. ggplot 두 개의 범주형 변수](/R/Ch05_ggplot_5.md)
 
-> [6. ggplot 범주형변수](/R/Ch06_ggplot_6.md)
+> [6. ggplot 셋 이상의 범주형 변수](/R/Ch06_ggplot_6.md)
 
 
 
