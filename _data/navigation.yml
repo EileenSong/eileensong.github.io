@@ -64,7 +64,9 @@ notes-kr:
       - title:  4. 두 개의 연속 변수
         url:    /notes/kr/R/Ch04_ggplot_4
       - title:  5. 두 개의 범주형 변수
-        url:    /notes/kr/R/Ch04_ggplot_4
+        url:    /notes/kr/R/Ch05_ggplot_5
+      - title:  6. 세 개 이상의 범주형 변수
+        url:    /notes/kr/R/Ch06_ggplot_6
 
 layouts:
   - title: Layouts
