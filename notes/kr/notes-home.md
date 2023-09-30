@@ -60,6 +60,7 @@ sidebar:
 
 > [8. 시계열 자료](/R/Ch08_ggplot_8.md)
 
+> [9. ggplot 꾸미기](/R/Ch09_ggplot_9.md)
 
 ### ✔️ 업로드 해야하는 것
 #️⃣ 기본 통계

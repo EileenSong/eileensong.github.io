@@ -71,6 +71,8 @@ notes-kr:
         url:    /notes/kr/R/Ch07_ggplot_7
       - title:  8. 시계열 자료
         url:    /notes/kr/R/Ch08_ggplot_8
+      - title:  9. ggplot 꾸미기
+        url:    /notes/kr/R/Ch09_ggplot_9
 
 layouts:
   - title: Layouts

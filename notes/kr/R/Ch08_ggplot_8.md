@@ -84,7 +84,7 @@ geom_line()는 x 값에 따라 포인트를 연결한다. 이는 x 축 값을 �
 ggplot(economics, aes(date, pce)) + geom_line()
 ```
 
-![Alt text](img/ggplot_53.PNG)
+![Alt text](img/ggplot_53.png)
 
 
 date에 따라 pce(개인 소비 지출)은 점점 증가함을 알 수 있음.
@@ -102,7 +102,7 @@ date에 따라 pce(개인 소비 지출)은 점점 증가함을 알 수 있음.
 ggplot(economics, aes(date, psavert)) + geom_line()
 ```
 
-![Alt text](img/ggplot_54.PNG)
+![Alt text](img/ggplot_54.png)
 
 
 psavert(개인 저축률)의 경우는 상황에 따라 왔다갔다 하는 것 같음.
@@ -119,7 +119,7 @@ psavert(개인 저축률)의 경우는 상황에 따라 왔다갔다 하는 것 
 ggplot(economics, aes(date, unemploy)) + geom_line()
 ```
 
-![Alt text](img/ggplot_55.PNG)
+![Alt text](img/ggplot_55.png)
 
 실업자 수는 경제가 안좋을 때는 내려갔다가 좋으면 올라가는 번갈아가는 모습을 보인다. 실업자 수는 population도 확인해주면 좋다.
 
@@ -136,7 +136,7 @@ population의 흐름을 따로 ggplot(economics, aes(date, pop)) + geom_line() �
 ggplot(economics, aes(date, unemploy / pop)) + geom_line()
 ```
 
-![Alt text](img/ggplot_56.PNG)
+![Alt text](img/ggplot_56.png)
 
 실제로 해보면 비슷하지만, 다소 정확하게 확인 수 있다.
 
@@ -154,7 +154,7 @@ ggplot(economics, aes(date, unemploy / pop)) + geom_line()
 ggplot(economics, aes(date, uempmed)) + geom_line()
 ```
 
-![Alt text](img/ggplot_57.PNG)
+![Alt text](img/ggplot_57.png)
 
 
 한달 평균의 중앙값인데, 최근이 될 수록 실업 지속기간이 좀 더 심각한 모습을 볼 수 있다.
