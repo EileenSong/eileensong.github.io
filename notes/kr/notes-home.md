@@ -20,11 +20,11 @@ sidebar:
 ### 📖 다음과 같은 주제가 있습니다
 
 ```
-클릭하면 이동할 수 있습니다
+아래 주제를 클릭하면 이동할 수 있습니다
 ```
 
 
-# ML/DL을 위한 알고리즘
+#### ML/DL을 위한 알고리즘
 
 >  [1. 선형 회귀](/algorithm/Ch01_linearReg.md) 
 
@@ -42,7 +42,7 @@ sidebar:
 
 
         
-# R Visualization
+##### R Visualization
 > [1. ggplot 기본 다루기](/R/Ch01_ggplot_1)
 
 > [2. ggplot 연속변수](/R/Ch02_ggplot_2)
