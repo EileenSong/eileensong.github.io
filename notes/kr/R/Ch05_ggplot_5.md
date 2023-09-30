@@ -34,8 +34,10 @@ str(Titanic)
 str(Titanic)로 변수를 확인해준다
 
 
-> str(Titanic)
+ str(Titanic)
+
  'table' num [1:4, 1:2, 1:2, 1:2] 0 0 35 0 0 0 17 0 118 154 ...
+
   attr(*, "dimnames")=List of 4
  
   ..$ Class   : chr [1:4] "1st" "2nd" "3rd" "Crew"
@@ -70,8 +72,10 @@ Titanic 데이터의 1번째 변수(Class)를 모두 sum을 하라는 의미이�
 ```r
 apply(Titanic, 2, sum)
 ```
-> apply(Titanic, 2, sum)
+ apply(Titanic, 2, sum)
+
   Male Female 
+
   1731    470 
 
 
@@ -90,7 +94,7 @@ Child Adult
 apply(Titanic, 4, sum)
 ```
 
-    No  Yes 
+  No  Yes 
 
 1490  711
 
@@ -189,7 +193,9 @@ product() 함수를 사용하지 않고 단일 변수만을 지정하면, 모자
 **전체를 100으로 봤을 때 x 축의 넓이는 1st, 2nd..등 class를 기준으로 포션이 나누어 진 것이다**
 
 
-Class가 1일때, 2일때,.. survived의 분포인데,
+### fill()
+
+fill은 계속 보아왔던 색상을 해당 변수 값에 따라 나뉘는 것이다. Class가 1일때, 2일때,.. survived, 즉 생존하였는가 그렇지 못하였는가에 대한 비율을 색상으로 나뉜다. 그래서, **결론적으로 알고싶은 변수를 fill로 놓기도 한다**
 
 
 
