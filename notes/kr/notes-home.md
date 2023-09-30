@@ -23,46 +23,31 @@ sidebar:
 클릭하면 이동할 수 있습니다
 ```
 
->  [선형회귀](/algorithm/Ch01_linearReg.md) 
-
->   [with R](/algorithm/Ch01_linearReg_withR.md)
-
->  [다중회귀](/notes/kr/algorithm/Ch02_multipleReg.md) 
-
->  [다항회귀](/notes/kr/algorithm/Ch03_poly) 
-
->  [편향 분산 트레이드오프](/notes/kr/algorithm/Ch04_Bias-Variance-Tradeoff.md)
-
->  [로지스틱 회귀](/notes/kr/algorithm/Ch05_Rogistic.md)
-
->   [with R](/notes/kr/algorithm/Ch06_classfications_R.md)
 
 # ML/DL을 위한 알고리즘
-      - title:  0. background
-        url:    (/algorithm/Ch00_basic.md)
-      - title:  1. 선형 회귀
-        url:    (/algorithm/Ch01_linearReg.md)
-      - title:  　1-1. 선형 회귀 with R
-        url:    /notes/kr/algorithm/Ch01_linearReg_withR
-      - title:  2. 다중 회귀
-        url:    /notes/kr/algorithm/Ch02_multipleReg
-      - title:  3. 다항 회귀
-        url:    /notes/kr/algorithm/Ch03_polyReg
-      - title:  4. 편향 분산 트레이드오프
-        url:    /notes/kr/algorithm/Ch04_Bias-Variance-Tradeoff
-      - title:  5. 로지스틱 회귀
-        url:    /notes/kr/algorithm/Ch05_Rogistic
-      - title:  　5-1. 로지스틱 회귀 with R
-        url:    /notes/kr/algorithm/Ch06_classfications_R
+
+>  [1. 선형 회귀](/algorithm/Ch01_linearReg.md) 
+
+>   [1-1. 선형 회귀 with R](/algorithm/Ch01_linearReg_withR.md)
+
+>  [2. 다중 회귀](/algorithm/Ch02_multipleReg.md) 
+
+>  [3. 다항 회귀](/algorithm/Ch03_poly) 
+
+>  [4. 편향 분산 트레이드오프](/algorithm/Ch04_Bias-Variance-Tradeoff.md)
+
+>  [5. 로지스틱 회귀](/algorithm/Ch05_Rogistic.md)
+
+>   [5-1. 로지스틱 회귀 with R](/algorithm/Ch06_classfications_R.md)
+
 
         
 # R Visualization
-      - title:  1. ggplot 기본 다루기
-        url:    /notes/kr/R/Ch01_ggplot_1
-      - title:  2. ggplot 연속변수
-        url:    /notes/kr/R/Ch02_ggplot_2
-      - title:  3. ggplot 범주형변수
-        url:    /notes/kr/R/Ch03_ggplot_3
+> [1. ggplot 기본 다루기](/R/Ch01_ggplot_1)
+
+> [2. ggplot 연속변수](/R/Ch02_ggplot_2)
+
+> [3. ggplot 범주형변수](/R/Ch03_ggplot_3)
 
 
 
