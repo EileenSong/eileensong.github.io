@@ -269,6 +269,82 @@ Good!
 
 <br>
 
+### 요일별 분포를 살펴보자!
+
+tips 자료에서도 요일별로 분포를 살펴보자. freqpoly로 colour=day로 해주면, 요일별로 다른 색의 선을 그려준다.
+
+```r
+ggplot(tips, aes(total_bill, colour=day)) +
+  geom_freqpoly(binwidth=5)
+```
+
+![Alt text](img/ggplot_29.png)
+
+하지만, 요일별 observation 수가 다르기 때문에 정확한 비교가 어렵다. 위에서 그랬듯, 이런 경우 그래서 density로 바꿀 수 있다.
+
+
+<br>
+
+density로 바꾸었을 때는 면적을 1로 바꾸기 떄문에 observation수가 다르더라도 명확히 비교가 가능하다.
+
+```r
+ggplot(tips, aes(total_bill, colour=day)) +
+  geom_density()
+```
+![Alt text](img/ggplot_30.png)
+
+각 요일별 피크가 어느정도인지 분포를 명확히 알 수 있다
+
+
+추가로 fill=day를 해주면 색깔 구분이 잘 되긴 하지만, 뒤에 가려진건 보이지 않기 때문에 alpha=를 해주면 색상에 투명도를 더해서 흐름을 볼 수 있다.
+
+```r
+ggplot(tips, aes(total_bill, colour=day, fill=day)) +
+  geom_density(alpha=0.5)
+```
+![Alt text](img/ggplot_32.png)
+
+
+위에서 처럼 선만 그린 것 보단 조금 더 비교하기가 쉬운 상황이 될 수도 있다.
+
+<br>
+
+
+같은 것을 히스토그램을 살펴본다. color를 day로 잡아두면, 각 바를 요일별로 분할하여 선으로 표시해준다. 
+
+```r
+ggplot(tips, aes(total_bill, colour=day)) +
+  geom_histogram()
+```
+![Alt text](img/ggplot_31.png)
+
+
+요일 순서대로 보인다. 점점 쌓아진 모습이다. 하지만 선이 잘 보이지 않고 복잡하기 때문에 역시 fill을 해주면 분포를 구분할 수 있다
+
+
+```r
+ggplot(tips, aes(total_bill, colour=day, fill=day)) +
+  geom_histogram()
+```
+
+하지만, 오히려 분포가 가리기도 해서 차라리 facet_wrap으로 4개를 day기준으로 나누는 것도 방법이다.
+```r
+ggplot(tips, aes(total_bill, colour=day, fill=day)) +
+  geom_histogram()+facet_wrap(~day)
+```
+
+근데 오히려 피크가 비슷할때는 헷갈릴 수도 있으니 ncol=1을 해주면 하나의 칼럼으로 만들어달라는 의미이기 때문에, 나란히 나열되기 때문에 4개 분포의 피크가 어디인지 알 수 있다.
+
+```r
+ggplot(tips, aes(total_bill, colour=day, fill=day)) +
+  geom_histogram()+facet_wrap(~day,ncol=1)
+```
+![Alt text](img/ggplot_33.png)
+
+
+
+<br>
+
 ## 정리하자면..
 <br>
 

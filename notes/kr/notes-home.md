@@ -28,7 +28,7 @@ sidebar:
 
 >  [1. 선형 회귀](/algorithm/Ch01_linearReg.md) 
 
->   [1-1. 선형 회귀 with R](/algorithm/Ch01_linearReg_withR.md)
+>  　[1-1. 선형 회귀 with R](/algorithm/Ch01_linearReg_withR.md)
 
 >  [2. 다중 회귀](/algorithm/Ch02_multipleReg.md) 
 
@@ -38,19 +38,23 @@ sidebar:
 
 >  [5. 로지스틱 회귀](/algorithm/Ch05_Rogistic.md)
 
->   [5-1. 로지스틱 회귀 with R](/algorithm/Ch06_classfications_R.md)
+>  　[5-1. 로지스틱 회귀 with R](/algorithm/Ch06_classfications_R.md)
 
 
         
-##### R Visualization
-> [1. ggplot 기본 다루기](/R/Ch01_ggplot_1)
+##### R Visualization-ggplot
 
-> [2. ggplot 연속변수](/R/Ch02_ggplot_2)
+> [1. ggplot 기본 다루기](R/Ch01_ggplot_1.md)
 
-> [3. ggplot 범주형변수](/R/Ch03_ggplot_3)
+> [2. ggplot 연속변수](/R/Ch02_ggplot_2.md)
 
+> [3. ggplot 하나의 범주형 변수](/R/Ch03_ggplot_3.md)
 
+> [4. ggplot 두 개의 연속 변수](/R/Ch04_ggplot_4.md)
 
+> [5. ggplot 두 개의 이상의 연속 변수들](/R/Ch05_ggplot_5.md)
+
+> [6. ggplot 범주형변수](/R/Ch06_ggplot_6.md)
 
 
 

@@ -59,8 +59,12 @@ notes-kr:
         url:    /notes/kr/R/Ch01_ggplot_1
       - title:  2. ggplot 연속변수
         url:    /notes/kr/R/Ch02_ggplot_2
-      - title:  3. ggplot 범주형변수
+      - title:  3. 하나의 범주형변수
         url:    /notes/kr/R/Ch03_ggplot_3
+      - title:  4. 두 개의 연속 변수
+        url:    /notes/kr/R/Ch04_ggplot_4
+      - title:  5. 두 개의 범주형 변수
+        url:    /notes/kr/R/Ch04_ggplot_4
 
 layouts:
   - title: Layouts

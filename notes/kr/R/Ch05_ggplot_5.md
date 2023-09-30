@@ -1,6 +1,6 @@
 ---
 layout: article
-title: 5. 두 개의 이상의 연속 변수들
+title: 5. 두 개 범주형 변수
 permalink: /notes/kr/R/Ch05_ggplot_5
 key: notes
 sidebar:
@@ -10,6 +10,10 @@ aside:
 mermaid: true
 mathjax: true
 ---
+
+<br>
+
+# 두 개의 범주형 변수
 
 
 
