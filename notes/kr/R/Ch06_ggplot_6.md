@@ -1,7 +1,7 @@
 ---
 layout: article
-title: 4. ggplot2 범주형 변수
-permalink: /notes/kr/R/Ch04_ggplot_4
+title: 6. 두 개의 연속 변수들
+permalink: /notes/kr/R/Ch06_ggplot_6
 key: notes
 sidebar:
   nav: notes-kr

@@ -20,6 +20,8 @@ html,
 }
 
 .page__main {
+  //메인 사이드바 나누기 위해 추가
+  padding-left: 82%;
   height: 100%;
   color: $text-color;
   .col-aside {
@@ -120,6 +122,7 @@ html,
   }
 }
 
+//사이드바 숨기기
 @include media-breakpoint-down(lg) {
   .page__sidebar {
     position: fixed;
