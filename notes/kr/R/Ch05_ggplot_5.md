@@ -36,11 +36,16 @@ str(Titanic)로 변수를 확인해준다
 
 > str(Titanic)
  'table' num [1:4, 1:2, 1:2, 1:2] 0 0 35 0 0 0 17 0 118 154 ...
- - attr(*, "dimnames")=List of 4
+  attr(*, "dimnames")=List of 4
+ 
   ..$ Class   : chr [1:4] "1st" "2nd" "3rd" "Crew"
+ 
   ..$ Sex     : chr [1:2] "Male" "Female"
+
   ..$ Age     : chr [1:2] "Child" "Adult"
+
   ..$ Survived: chr [1:2] "No" "Yes"
+
 
 
 4차원 테이블이다. 
@@ -60,6 +65,7 @@ Titanic 데이터의 1번째 변수(Class)를 모두 sum을 하라는 의미이�
  325  285  706  885 
 
 
+<br>
 
 ```r
 apply(Titanic, 2, sum)
@@ -69,6 +75,7 @@ apply(Titanic, 2, sum)
   1731    470 
 
 
+<br>
 
 ```r
 apply(Titanic, 3, sum)
@@ -78,6 +85,7 @@ Child Adult
   109  2092
 
 
+<br>
 ```r
 apply(Titanic, 4, sum)
 ```
@@ -87,7 +95,7 @@ apply(Titanic, 4, sum)
 1490  711
 
 
-
+<br>
 
 ```r
 apply(Titanic, c(1,4), sum)
@@ -114,16 +122,19 @@ Class   No Yes
 
   Crew 673 212
 
+<br>
 
 
 ## geom_mosaic
 
+<br>
 
 ggmosaic을 활용해보겠다. 당연히, 패키지가 없다면 설치해야한다.
 
 mosaic() 함수는 범주형 변수들 간의 관계를 시각화하기 위한 모자이크 플롯(mosaic plot)을 생성하는 함수다. 모자이크 플롯은 테이블 내의 빈도나 비율에 따라 각 카테고리의 영역 크기를 조절하여, 두 개 이상의 범주형 변수 간의 관계를 시각적으로 표현할 수 있다.
 
 
+<br>
 
 ```r
 library(ggmosaic)
@@ -146,6 +157,8 @@ Titanic 데이터셋은 table 형식이기 때문에, data.frame 객체로 변�
 
 
 
+<br>
+
 ### Q1. 탑승 클래스에 따라 survived가 어떻게 달라지는가?
 
 
@@ -154,6 +167,9 @@ Titanic 데이터셋은 table 형식이기 때문에, data.frame 객체로 변�
 ```r
 ggplot(Titanic.data)+geom_mosaic(aes(x=product(Class), weight=Freq, fill=Survived))
 ```
+
+
+<br>
 
 #### product()
 
@@ -174,6 +190,8 @@ product() 함수를 사용하지 않고 단일 변수만을 지정하면, 모자
 
 
 Class가 1일때, 2일때,.. survived의 분포인데,
+
+
 
 
 
