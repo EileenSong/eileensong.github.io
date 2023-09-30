@@ -124,6 +124,23 @@ html,
 @include media-breakpoint-down(lg) {
   .page__sidebar {
     position: fixed;
+   @include transform(translate(- map-get($layout, sidebar-width), 0));
+  }
+
+  .page__actions {
+    display: block;
+  }
+
+  .show-sidebar {
+    .page__actions {
+      visibility: hidden;
+    }
+    .page__sidebar {
+      @include transform(translate(0));
+    }
+    .page__mask {
+      @include modal--show();
+    }
   }
 }
 
