@@ -1,7 +1,7 @@
 ---
 layout: article
 title: Classification with R
-permalink: /notes/kr/algorithm/Ch06_classfications_R
+permalink: /notes/kr/algorithm/Ch05_classfications_R
 key: notes
 sidebar:
   nav: notes-kr
