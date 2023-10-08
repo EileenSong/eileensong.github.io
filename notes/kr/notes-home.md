@@ -40,6 +40,9 @@ sidebar:
 
 >  　[5-1. 로지스틱 회귀 with R](/algorithm/Ch06_classfications_R.md)
 
+>  [6. 선형판별분석(LDA)](algorithm/Ch06_LDA.md)
+
+>  [7. Resampling](algorithm/Ch07_resampling_R.md)
 
         
 ##### R Visualization-ggplot

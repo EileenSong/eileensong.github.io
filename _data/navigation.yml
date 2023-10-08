@@ -51,6 +51,8 @@ notes-kr:
         url:    /notes/kr/algorithm/Ch05_Rogistic
       - title:  　5-1. 로지스틱 회귀 with R
         url:    /notes/kr/algorithm/Ch06_classfications_R
+      - title:  6. 선형판별분석(LDA)
+        url:    /notes/kr/algorithm/Ch06_LDA
       - title:  7. Resampling with R
         url:    /notes/kr/algorithm/Ch07_resampling_r 
 
