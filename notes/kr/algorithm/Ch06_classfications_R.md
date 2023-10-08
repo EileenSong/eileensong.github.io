@@ -18,16 +18,17 @@ mathjax: true
 
 # Classification_4.8 Exercises
 
-## 222DSN11 송현지
 
 ## 1번
 
 
 `Question`
+
  Using a little bit of algebra, prove that (4.2) is equivalent to (4.3). In other words, the logistic function representation and logit representation for the logistic regression model are quivalent.
 
 
 `Answer`
+
 1. 로지스틱 함수 표현?
  로지스틱 함수는 앞서 보았듯, 주어진 입력 X에 대한 이벤트가 발생할 확률을 나타낸다. 즉, 그 결과는 0과 1 사이의 값이다. 그래서 시그모이드 함수로 표현하는 것을 보았다.
 
@@ -168,13 +169,11 @@ LDA가 선형 decision boundary를 모델링하므로, Bayes decision boundary�
 다만, 훈련세트에서 QDA가 오버피팅할 가능성이 있기 때문에 QDA가 나은 성능을 보일수도 있지만, 결국 선형 decision boundary를 모델링하는데 적합한 LDA가 더 나은 성능을 보일 것으로 예상된다.
 
 
-
 ```
 LDA (Linear Discriminant Analysis): 각 클래스의 데이터가 동일한 공분산 구조를 가진다고 가정하고, 선형 결정 경계를 생성
 
 QDA (Quadratic Discriminant Analysis): 각 클래스의 데이터가 다른 공분산 구조를 가질 수 있다고 가정하고, 비선형 결정 경계를 생성
 ```
-
 
 
 `Question`
@@ -604,6 +603,29 @@ pairs(Auto[, -which(names(Auto) %in% c("mpg", "mpg01"))], col=Auto$mpg01+1)
 ![Alt text](img/logistic3.png)
 
 
+**색깔**
+
+붉은색: mpg가 중앙값보다 높은 경우
+
+검은색: mpg가 중앙값보다 낮은 경우
+
+**가로축과 세로축**
+
+각 작은 그래프의 가로축과 세로축은 변수를 나타낸다.
+
+예를 들어, 'displacement'와 'horsepower' 사이의 그래프는 'displacement'의 값이 증가함에 따라 'horsepower'가 어떻게 변하는지 보여준.
+
+**변수 간의 관계**
+
+그래프에서 점들이 어떻게 분포되어 있는지를 보면 두 변수 사이의 관계를 알 수 있다. 점들이 오른쪽 위로 기울어져 있으면 양의 상관관계, 왼쪽 위로 기울어져 있으면 음의 상관관계를 가진다고 할 수 있다
+
+
+**!어떤 변수가 mpg01 예측에 도움이 될까?**
+
+붉은색과 검은색 점들이 명확하게 분리되어 있는 변수는 mpg01을 예측하는 데 도움이 될 가능성이 있다.
+예를 들어, weight 변수에서는 무거운 차량이 주로 mpg의 중앙값 아래에 있고, 가벼운 차량이 중앙값 위에 있다.
+
+
 
 
 `Question`
@@ -719,6 +741,16 @@ naive_bayes_error
 [1] 0.1186441
 
 
+로지스틱하고 나이브베이즈의 동일 에러결과가 나왔다.
+
+로지스틱 회귀는 입력 변수와 출력 간의 선형 관계를 가정하며, 이 관계를 사용하여 확률을 예측
+
+나이브 베이즈는 각 특성이 독립적이라는 (나이브한) 가정을 기반으로 하며, 베이즈의 정리를 사용하여 확률을 업데이트
+
+두 모델이 동일한 테스트 에러를 보이는 것은, 이 데이터에 대해 두 방법 모두 비슷한 예측 성능을 가지고 있음. 하지만 데이터의 특성과 분포, 그리고 문제의 복잡도 등 여러 요인에 따라 달라질 수 있음.
+
+
+
 `Question`
 
 (h) Perform KNN on the training data, with several values of K, in order to predict mpg01. Use only the variables that seemed most associated with mpg01 in (b). What test errors do you obtain? Which value of K seems to perform the best on this data set
@@ -814,3 +846,5 @@ zn, nox, dis, rad, ptratio, tax, black, medv 변수가 유의한 것 같다.
 <br><br><br>
 끝🙂
 <br><br><br>
+
+
