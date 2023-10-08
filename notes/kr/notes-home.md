@@ -38,9 +38,9 @@ sidebar:
 
 >  [5. 로지스틱 회귀](/algorithm/Ch05_Rogistic.md)
 
->  　[5-1. 로지스틱 회귀 with R](/algorithm/Ch05_classfications_R.md)
-
 >  [6. 선형판별분석(LDA)](algorithm/Ch06_LDA.md)
+
+>  　[6-1. 로지스틱 회귀 with R](/algorithm/Ch06_classfications_R.md)
 
 >  [7. Resampling](algorithm/Ch07_resampling_R.md)
 

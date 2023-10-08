@@ -1,7 +1,7 @@
 ---
 layout: article
 title: Classification with R
-permalink: /notes/kr/algorithm/Ch05_classfications_R
+permalink: /notes/kr/algorithm/Ch06_classfications_R
 key: notes
 sidebar:
   nav: notes-kr
@@ -131,13 +131,13 @@ $$
 
 - 수식 의미
 ​
-$p_k(x)$: 이것은 데이터 포인트 x가 k번째 클래스에 속할 확률을 나타냄
+p_k(x): 이것은 데이터 포인트 x가 k번째 클래스에 속할 확률을 나타냄
 
 
-$π_k$: $k$번째 클래스의 사전 확률로 아무런 정보 없이 k번째 클래스에 속할 기본 확률을 의미
+π_k: k째 클래스의 사전 확률로 아무런 정보 없이 k번째 클래스에 속할 기본 확률을 의미
 
 
-$μ_k$와 $σ$: k번째 클래스의 평균과 표준편차로 각 클래스의 데이터 분포를 나타냄. 데이터 포인트 x가 어떤 클래스에 속할지 결정하기 위해 사용되며, 로그 변환은 이러한 확률 계산을 단순화하기 위해 사용됨.
+μ_k와 σ: k번째 클래스의 평균과 표준편차로 각 클래스의 데이터 분포를 나타냄. 데이터 포인트 x가 어떤 클래스에 속할지 결정하기 위해 사용되며, 로그 변환은 이러한 확률 계산을 단순화하기 위해 사용됨.
 
 
 간단히 말해, 이 수식들은 주어진 데이터 포인트가 어떤 그룹에 속하는지 가장 확률이 높은지를 결정하기위해 사용됨.
@@ -338,12 +338,16 @@ Accuracy = $\frac{TP + TN}{TP + TN + FP + FN}$
 
 
 > r로 정확도 계산하기
+
 ```
 matrix_data <- matrix(c(54, 48, 430, 557), ncol=2)
+
 rownames(matrix_data) <- c("Down", "Up")
+
 colnames(matrix_data) <- c("Down", "Up")
 
 accuracy <- sum(diag(matrix_data)) / sum(matrix_data)
+
 accuracy
 ```
 
