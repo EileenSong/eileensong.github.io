@@ -14,7 +14,6 @@ mathjax: true
 
 *해당 포스팅은 'an introduction to statistical learning' 책의 연습문제를 R로 해석하며 공부한 것을 정리해두었습니다*
 
-## HW_3 222DSN11 송현지
 
 <br>
 
@@ -31,13 +30,13 @@ mathjax: true
 <br>
 
 ### a
-'Question'
+`Question`
 (a) Fit a logistic regression model that uses income and balance to
 predict default
 <br>
 
 
-'Answer'
+`Answer`
 
 로지스틱 회귀분석을 활용하여 Default 데이터셋에서 기본값(default)의 확률을 예측해야한다. 일단 glm()함수를 써서 로지스틱 회귀 모델을 fit한다. fit한다는 것은 단지 데이터에 통계모델을 적용하는 것이라고 생각하면 된다.
 
@@ -63,7 +62,7 @@ set.seed()는 R의 난수 생성기 초기 상태를 설정한다.
 ```
 
 ### b
-'Question'
+`Question`
 
 (b) Using the validation set approach, estimate the test error of this
 model. In order to do this, you must perform the following steps:
@@ -71,7 +70,7 @@ model. In order to do this, you must perform the following steps:
 
 i. Split the sample set into a training set and a validation set.
 
-'Answer'
+`Answer`
 
 일단, 데이터 셋을 훈련 세트와 검증 세트로 나눈다
 
@@ -90,13 +89,13 @@ Default 데이터 프레임의 행의 개수를 sample_size에 저장하고,
 
 
 
-'Question'
+`Question`
 ii. Fit a multiple logistic regression model using only the training observations. 
 
 
 
 
-'Answer'
+`Answer`
 
 훈련 세트만 사용하여 로지스틱 회귀 모델을 다시 적합
 ```r
@@ -106,7 +105,7 @@ model_train <- glm(default ~ income + balance, data=train_set, family=binomial)
 
 
 
-'Question'
+`Question`
 iii. Obtain a prediction of default status for each individual in
 the validation set by computing the posterior probability of
 default for that individual, and classifying the individual to
@@ -115,7 +114,7 @@ than 0.5.
 
 
 
-'Answer'
+`Answer`
 
 검증 세트에서의 기본값(default) 예측
 
@@ -136,13 +135,13 @@ predictions <- ifelse(probs > 0.5, "Yes", "No")
 
 
 
-'Question'
+`Question`
 iv. Compute the validation set error, which is the fraction of
 the observations in the validation set that are misclassifed.
 
 
 
-'Answer'
+`Answer`
 검증 세트에서의 set error 계산
 
 ```r
@@ -165,14 +164,16 @@ misclass_rate
 
 
 ### c
-'Question'
+
+
+`Question`
 
 (c) Repeat the process in (b) three times, using three diferent splits
 of the observations into a training set and a validation set. Comment on the results obtained.
 
 <br>
 
-'Answer'
+`Answer`
 
 - 1번째 결과: [1] 0.02633333
 
@@ -190,14 +191,14 @@ of the observations into a training set and a validation set. Comment on the res
 
 ### d
 
-'Question'
+`Question`
 (d) Now consider a logistic regression model that predicts the probability of default using income, balance, and a dummy variable
 for student. Estimate the test error for this model using the validation set approach. Comment on whether or not including a
 dummy variable for student leads to a reduction in the test error
 rate
 
 
-'Answer'
+`Answer`
 학생 dummy variable, income, balance를 사용한 기본값의 확률 예측하는 회귀를 그려야한다.
 
 validation set approach를 사용해서 오류 측정하고, 다음으로 dummy 변수를 포함하는 것이 test error rate를 줄이는지 확인해보아야 한다...
@@ -240,7 +241,7 @@ misclass_rate_student
 ## 8번
 
 <br> 
-'Question'
+`Question`
 
 We will now perform cross-validation on a simulated data set.
 
@@ -264,7 +265,7 @@ used to generate the data in equation form.
 
 
 
-'Answer'
+`Answer`
 
 - n: 데이터의 관측치 개수
 
@@ -287,11 +288,11 @@ rnorm(100)으로 생성된 랜덤한 값이기 때문에, 측정 오차가 있�
 
 ### b
 
-'Question'
+`Question`
 (b) Create a scatterplot of X against Y . Comment on what you fnd.
 
 
-'Answer'
+`Answer`
 
 ```r
 plot(x, y, main="Scatterplot of X against Y", xlab="X", ylab="Y")
@@ -312,7 +313,7 @@ linear하지 않고, 2차 방정식의 형태를 잘 띄고 있고, 변동성도
 ### c
 
 
-'Question'
+`Question`
 (c) Set a random seed, and then compute the LOOCV errors that
 result from ftting the following four models using least squares:
 
@@ -328,7 +329,7 @@ to create a single data set containing both X and Y .
 
 
 
-'Answer'
+`Answer`
 
 위 네 모델을 fit하고, LOOCV오류 계산해야한다.
 boot패키지의 cv.glm()함수를 써서 계산해보겠다.
@@ -395,12 +396,12 @@ cv.glm() 함수의 결과 객체인 cv에서 delta는 교차 검증 오차 추�
 
 ### d
 
-'Question'
+`Question`
 (d) Repeat (c) using another random seed, and report your results.
 Are your results the same as what you got in (c)? Why?
 
 
-'Answer'
+`Answer`
 
 다른 seed를 써서 반복해 보았다, 결과는 다음과 같다.
 
@@ -429,12 +430,12 @@ c와 유사하기 1번 함수가 오차가 제일 크다. 데이터 모델이 2�
 
 ### e
 
-'Question'
+`Question`
 (e) Which of the models in (c) had the smallest LOOCV error? Is
 this what you expected? Explain your answer
 
 
-'Answer'
+`Answer`
 
 실제 데이터 모델과 데이터 구조가 가장 일치하기 때문에 2번 모델이 가장 낮은 LOOCV 오차를 나타낼 수 밖에 없는 것 같다. 
 
