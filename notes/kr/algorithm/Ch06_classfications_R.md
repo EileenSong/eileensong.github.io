@@ -18,6 +18,7 @@ mathjax: true
 
 # Classification_4.8 Exercises
 
+## 222DSN11 송현지
 
 ## 1번
 
@@ -181,6 +182,7 @@ QDA (Quadratic Discriminant Analysis): 각 클래스의 데이터가 다른 공�
 (b) If the Bayes decision boundary is non-linear, do we expect LDA or QDA to perform better on the training set? On the test set?
 
 
+
 `Answer`
 위 A번과 달리, Bayes의 바운더리가 비선형인 경우 QDA가 비선형 decision boundary를 모델링할 수 있으므로 QDA가의 성능이 더 좋을 것이다.
 
@@ -189,14 +191,17 @@ QDA (Quadratic Discriminant Analysis): 각 클래스의 데이터가 다른 공�
 
 (c) In general, as the sample size n increases, do we expect the test prediction accuracy of QDA relative to LDA to improve, decline, or be unchanged? Why?
 
+
 `Answer`
 
 샘플 사이즈 n이 증가하면, QDA의 성능이 더 향상될 것이다. QDA는 모델이 복잡하기 때문에 더 많은 데이터가 필요하고, 샘플 데이터의 사이즈가 더 커진다면 복잡한 패턴을 학습해서 더 좋은 성능을 낼 것이기 때문이다.
 
 
+
 `Question`
 
 (d) True or False: Even if the Bayes decision boundary for a given problem is linear, we will probably achieve a superior test error rate using QDA rather than LDA because QDA is fex enough to model a linear decision boundary. Justify your answer.
+
 
 
 `Answer`
@@ -215,6 +220,7 @@ Suppose we collect data for a group of students in a statistics class with varia
 
 
 (a) Estimate the probability that a student who studies for 40 h and has an undergrad GPA of 3.5 gets an A in the class.
+
 
 
 `Answer`
@@ -304,6 +310,7 @@ summary(fit_logistic)
 intercept와 lag2만 유의미한 변수인 것 같다.
 
 
+
 `Question`
 
 (c) Compute the confusion matrix and overall fraction of correct predictions. Explain what the confusion matrix is telling you about the types of mistakes made by logistic regression.
@@ -352,12 +359,49 @@ accuracy
 ```
 
 
+
 `Question`
 
 (d) Now ft the logistic regression model using a training data period from 1990 to 2008, with Lag2 as the only predictor. Compute the confusion matrix and the overall fraction of correct predictions for the held out data (that is, the data from 2009 and 2010).
 
 
 `Answer`
+
+1990~2008년까지 훈련데이터로, 2009~2010년까지 테스트데이터로 분할하고, Lag2에 대해 특정 예측변수만 사용해서 로지스틱 회귀 모델로 학습시켜야한다. 이후 성능 평가를 위해 confusion matrix를 생성하여 모델 예측도와 오류 유형을 파악해야한다. 이후 전체 정확도 계산.
+
+
+훈련 / 테스트 셋 분할
+
+```r
+train <- subset(Weekly, Year < 2009)
+test <- subset(Weekly, Year >= 2009)
+```
+
+
+로지스틱 회귀 돌리기
+
+```r
+fit_logistic_d <- glm(Direction ~ Lag2, data=train, family=binomial)
+pred_logistic_d <- predict(fit_logistic_d, newdata=test, type="response")
+predicted_direction_d <- ifelse(pred_logistic_d > 0.5, "Up", "Down")
+```
+
+
+Confusion matrix 및 정확도 계산
+
+```r
+conf_matrix <- table(test$Direction, predicted_direction_d)
+accuracy <- sum(diag(conf_matrix)) / sum(conf_matrix)
+conf_matrix
+accuracy
+```
+
+>결과
+
+[1] 0.625
+
+로지스틱 회귀 모델 62.5%의 정확도가 나옴.
+
 
 
 
@@ -366,6 +410,31 @@ accuracy
 (e) Repeat (d) using LDA.
 
 `Answer`
+
+LDA모델로 train data 훈련
+
+```r
+set.seed(123) 
+lda<- train(Direction ~ Lag2, data=train, method="lda")
+```
+
+학습된 LDA 모델을 사용하여 테스트 데이터의 예측
+```r
+lda_pred <- predict(lda_fit, test)$class
+```
+
+Confusion matrix와 전체 정확도를 계산
+```r
+conf_matrix_lda <- confusionMatrix(lda_pred, test$Direction)
+conf_matrix_lda$table
+conf_matrix_lda$overall['Accuracy']
+```
+
+>결과
+  0.625 
+
+62.5%의 정확도로 나타남
+
 
 
 
@@ -376,6 +445,33 @@ accuracy
 `Answer`
 
 
+QDA 모델을 훈련 데이터로 학습
+
+```r
+set.seed(123)
+qda_fit <- train(Direction ~ Lag2, data=train, method="qda")
+```
+
+QDA 모델을 사용하여 테스트 데이터의 예측
+```r
+qda_pred <- predict(qda_fit, newdata=test)
+```
+
+Confusion matrix와 전체 정확도를 계산
+
+```r
+conf_matrix_qda <- confusionMatrix(qda_pred, test$Direction)
+conf_matrix_qda$table
+conf_matrix_qda$overall['Accuracy']
+```
+
+>결과
+0.5865385 
+
+58.6%의 정확도로 예측함. LDA보다 낮은 예측률 보임.
+
+
+
 
 `Question`
 
@@ -383,13 +479,69 @@ accuracy
 
 `Answer`
 
+```r
+train_X <- as.matrix(train$Lag2)
+test_X <- as.matrix(test$Lag2)
+train_Y <- train$Direction
+```
+
+```r
+set.seed(123) # 재현 가능성을 위한 시드 설정
+knn_pred <- knn(train_X, test_X, train_Y, k=1)
+```
+
+```r
+conf_matrix_knn <- table(test$Direction, knn_pred)
+accuracy_knn <- sum(diag(conf_matrix_knn)) / sum(conf_matrix_knn)
+conf_matrix_knn
+accuracy_knn
+```
+
+>결과
+      knn_pred
+
+       Down Up
+
+  Down   21 22
+
+  Up     29 32
+
+> accuracy_knn
+[1] 0.5096154
+
+50.9%의 정확도로 예측함. 지금까지의 모델 중에선 KNN 모델이 가장 낮은 성능을 보이는 것으로 보임.
+
+
 
 
 `Question`
 
 (h) Repeat (d) using naive Bayes.
 
+
 `Answer`
+
+베이즈 쓰기 위해 install.packages("e1071"). 나이브 베이즈는 텍스트 분류에 자주 쓰임. 베이즈 정리 기반으로한 확률적 분류며 알다시피 조건부 독립을 가정해서 naive라고 함. 특징간 관계가 없다고 간주하고 계산이 단순화되어 효율적으로 처리됨.
+
+
+```r
+library(e1071)
+
+nb_fit <- naiveBayes(Direction ~ Lag2, data=train)
+
+nb_pred <- predict(nb_fit, newdata=test)
+
+conf_matrix_nb <- table(test$Direction, nb_pred)
+accuracy_nb <- sum(diag(conf_matrix_nb)) / sum(conf_matrix_nb)
+conf_matrix_nb
+accuracy_nb
+```
+
+>결과
+[1] 0.5865385
+
+58%의 정확도로 예측함.
+
 
 
 
@@ -400,7 +552,7 @@ accuracy
 
 `Answer`
 
-
+로지스틱과 LDA가 62.%의 정확도를 보이고, 다음으로 QDA, NB가 58.65%, KNN은 50%의 정확도를 보였다.
 
 
 
@@ -410,33 +562,210 @@ accuracy
 
 `Question`
 
-In this problem, you will develop a model to predict whether a given
-car gets high or low gas mileage based on the Auto data set.
-(a) Create a binary variable, mpg01, that contains a 1 if mpg contains
-a value above its median, and a 0 if mpg contains a value below
-its median. You can compute the median using the median()
-function. Note you may fnd it helpful to use the data.frame()
-function to create a single data set containing both mpg01 and
-the other Auto variables.
-(b) Explore the data graphically in order to investigate the association between mpg01 and the other features. Which of the other
-features seem most likely to be useful in predicting mpg01? Scatterplots and boxplots may be useful tools to answer this question. Describe your fndings.
+In this problem, you will develop a model to predict whether a given car gets high or low gas mileage based on the Auto data set.
+
+(a) Create a binary variable, mpg01, that contains a 1 if mpg contains a value above its median, and a 0 if mpg contains a value below its median. You can compute the median using the median() function. Note you may fnd it helpful to use the data.frame() function to create a single data set containing both mpg01 and the other Auto variables.
+
+
+
+`Answer`
+
+ Auto 데이터셋의 mpg변수를 기반으로 고/저 연료 효율의 자동차를 예측하기 위한 이진 변수 mpg01을 생성해야 함. mpg의 값이 중앙값보다 높으면 mpg01은 1을, 그렇지 않으면 0을 가져야하고, 중앙값은 median() 함수를 사용하여 계산해라..
+
+Auto는 ISLR에 있었따.. 
+
+```r
+library(ISLR)
+head(Auto)
+```
+
+
+변수 중앙값과 mpg01의 이진변수 생성
+
+```r
+mpg_median <- median(Auto$mpg)
+Auto$mpg01 <- ifelse(Auto$mpg > mpg_median, 1, 0)
+```
+
+
+
+`Question`
+
+(b) Explore the data graphically in order to investigate the association between mpg01 and the other features. Which of the other features seem most likely to be useful in predicting mpg01? Scatterplots and boxplots may be useful tools to answer this question. Describe your fndings.
+
+
+연속형 변수니, pari()를 써서 산점도를 그렸다.
+
+```r
+pairs(Auto[, -which(names(Auto) %in% c("mpg", "mpg01"))], col=Auto$mpg01+1)
+```
+
+
+![Alt text](img/logistic3.png)
+
+
+
+
+`Question`
+
 (c) Split the data into a training set and a test set.
-(d) Perform LDA on the training data in order to predict mpg01
-using the variables that seemed most associated with mpg01 in
-(b). What is the test error of the model obtained (e) Perform QDA on the training data in order to predict mpg01
-using the variables that seemed most associated with mpg01 in
-(b). What is the test error of the model obtained?
-(f) Perform logistic regression on the training data in order to predict mpg01 using the variables that seemed most associated with
-mpg01 in (b). What is the test error of the model obtained?
-(g) Perform naive Bayes on the training data in order to predict
-mpg01 using the variables that seemed most associated with mpg01
-in (b). What is the test error of the model obtained?
-(h) Perform KNN on the training data, with several values of K, in
-order to predict mpg01. Use only the variables that seemed most
-associated with mpg01 in (b). What test errors do you obtain?
-Which value of K seems to perform the best on this data set
 
 
+```r
+set.seed(123)
+index <- sample(1:nrow(Auto), nrow(Auto)*0.7)
+
+train <- Auto[index, ]
+test <- Auto[-index, ]
+```
+
+`Question`
+
+(d) Perform LDA on the training data in order to predict mpg01 using the variables that seemed most associated with mpg01 in (b). What is the test error of the model obtained 
+
+
+`Answer`
+
+LDA모델 학습
+
+```r
+lda_model <- lda(mpg01 ~ weight + horsepower + displacement, data=train)
+```
+
+
+예측
+
+```r
+lda_pred <- predict(lda_model, newdata=test)$class
+```
+
+에러 계산
+
+```r
+test_error <- mean(lda_pred != test$mpg01)
+test_error
+```
+
+>결과
+
+[1] 0.1186441
+
+에러가 11.8%이므로, 정확도는 88.14%로 mpg01을 예측한 결과가 나옴.
+
+weight, horsepower, displacement가 유용한 변수로 나옴.
+
+
+`Question`
+
+(e) Perform QDA on the training data in order to predict mpg01 using the variables that seemed most associated with mpg01 in (b). What is the test error of the model obtained?
+
+
+`Answer`
+
+이번엔 각 클래스에 대해 공분산 행렬 추정하고, QDA이므로 비선형 경계가 나타날 수 있음.
+
+```r
+qda_fit <- qda(mpg01 ~ weight + horsepower + displacement, data = train)
+qda_pred <- predict(qda_fit, test)$class
+test_error <- mean(qda_pred != test$mpg01)
+test_error
+```
+
+>결과
+
+[1] 0.1016949
+
+테스트 에러는 10.17%로 LDA보다 조금 더 나은 성능을 보인다. LDA는 모든 클래스에 대해 동일한 공분산, QDA는 각 클래스마다 공분산을 가진 결과인 것 같다.
+
+
+
+`Question`
+
+(f) Perform logistic regression on the training data in order to predict mpg01 using the variables that seemed most associated with mpg01 in (b). What is the test error of the model obtained?
+
+
+`Answer`
+
+```r
+logistic_fit <- glm(mpg01 ~ weight + year + displacement + horsepower, data=train, family=binomial)
+logistic_pred <- predict(logistic_fit, test, type="response")
+logistic_pred_class <- ifelse(logistic_pred > 0.5, 1, 0)
+logistic_error <- mean(logistic_pred_class != test$mpg01)
+logistic_error
+```
+
+>결과
+
+[1] 0.1186441
+
+
+
+`Question`
+
+(g) Perform naive Bayes on the training data in order to predict mpg01 using the variables that seemed most associated with mpg01 in (b). What is the test error of the model obtained?
+
+
+`Answer`
+
+```r
+naive_bayes_fit <- naiveBayes(mpg01 ~ weight + year + displacement + horsepower, data=train)
+naive_bayes_pred <- predict(naive_bayes_fit, test)
+naive_bayes_error <- mean(naive_bayes_pred != test$mpg01)
+naive_bayes_error
+```
+
+>결과
+
+[1] 0.1186441
+
+
+`Question`
+
+(h) Perform KNN on the training data, with several values of K, in order to predict mpg01. Use only the variables that seemed most associated with mpg01 in (b). What test errors do you obtain? Which value of K seems to perform the best on this data set
+
+`Answer`
+
+k는 이웃 수. k값이 작으면 모델은 노이즈에 민감하고 크면 decision boundary가 스무스해서 과소적합할 가능성이 있음. 
+
+```r
+library(class)
+
+train_X <- train[, c("weight", "year", "displacement", "horsepower")]
+test_X <- test[, c("weight", "year", "displacement", "horsepower")]
+
+k_values <- c(1, 3, 5, 7, 9, 11, 13, 15) 
+errors <- numeric(length(k_values))
+
+for (i in 1:length(k_values)) {
+  set.seed(123)  
+  knn_pred <- knn(train_X, test_X, train$mpg01, k=k_values[i])
+  errors[i] <- mean(knn_pred != test$mpg01)
+}
+
+data.frame(K=k_values, Error=errors)
+```
+
+>결과 
+
+  K      Error
+
+1  1 0.16949153
+
+2  3 0.13559322
+
+3  5 0.11016949
+
+4  7 0.10169492
+
+5  9 0.11016949
+
+6 11 0.08474576
+
+7 13 0.09322034
+
+8 15 0.10169492
+
+11일 때가 가장 낮은 8.4%의 에러를 보임. k=11
 
 
 
@@ -446,7 +775,39 @@ Which value of K seems to perform the best on this data set
 
 `Question`
 
-Using the Boston data set, ft classifcation models in order to predict whether a given census tract has a crime rate above or below the median. Explore logistic regression, LDA, naive Bayes, and KNN models using various subsets of the predictors. Describe your fndings. Hint: You will have to create the response variable yourself, using the variables that are contained in the Boston data set
+Using the Boston data set, ft classifcation models in order to predict whether a given census tract has a crime rate above or below the median. Explore logistic regression, LDA, naive Bayes, and KNN models using various subsets of the predictors. Describe your fndings. 
+
+>Hint: You will have to create the response variable yourself, using the variables that are contained in the Boston data set
+
+
+
+`Answer`
+
+ Boston 데이터셋을 사용하여 인구 조사 구역의 범죄율이 중앙값보다 높은지 또는 낮은지를 예측하기 위한 분류 모델을 구축하여 위와 동일하게 로지스틱, LDA, NB, KNN 모델 탐색해야한당..
+
+
+일단 불러오고 변수 생성
+
+```r
+library(MASS)
+crim_median <- median(Boston$crim)
+Boston$crim01 <- ifelse(Boston$crim > crim_median, 1, 0)
+```
+
+로지스틱
+```r
+glm_fit <- glm(crim01 ~ . - crim, data=Boston, family=binomial)
+summary(glm_fit)
+```
+
+![Alt text](img/logistic2.png)
+
+zn, nox, dis, rad, ptratio, tax, black, medv 변수가 유의한 것 같다. 
+
+모델 적합도를 평가하는 Residual deviance가 Null deviance보다 훨씬 작으면 모델이 데이터에 잘 적합되었다고 볼 수 있음.   Null deviance는 701.46, Residual deviance는 211.93으로 모델이 데이터에 상당히 잘 적합되었다고 보면 된다. 즉, Boston 데이터셋의 여러 변수들을 기반으로 범죄율이 중앙값보다 높을 확률을 예측한다.
+
+
+
 
 
 
