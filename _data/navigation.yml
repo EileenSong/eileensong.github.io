@@ -28,11 +28,7 @@ notes-kr:
   - title:      Notes
     children:
       - title:  Notes Home
-        url:    /notes/kr/notes-home
-  - title:      기본 통계
-    children:
-      - title:  1. 작성중..
-        url:    /notes/kr/statistics/Ch01_       
+        url:    /notes/kr/notes-home 
   - title:      ML/DL을 위한 알고리즘
     children:
       - title:  0. background
@@ -53,7 +49,6 @@ notes-kr:
         url:    /notes/kr/algorithm/Ch06_LDA
       - title:  　6-1. 로지스틱 회귀 with R
         url:    /notes/kr/algorithm/Ch06_classfications_R
-
       - title:  7. Resampling with R
         url:    /notes/kr/algorithm/Ch07_resampling_r 
 
@@ -78,6 +73,8 @@ notes-kr:
         url:    /notes/kr/R/Ch08_ggplot_8
       - title:  9. 시계열 자료(Covid data)
         url:    /notes/kr/R/Ch09_ggplot_9
+      - title:  12. group
+        url:    /notes/kr/R/Ch12_ggplot_12
 
 layouts:
   - title: Layouts

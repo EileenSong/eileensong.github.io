@@ -1,6 +1,6 @@
 ---
 layout: article
-title: 10. Group() 활용하기
+title: 10. 그림안에 글자넣기
 permalink: /notes/kr/R/Ch10_ggplot_10
 key: notes
 sidebar:
@@ -17,7 +17,7 @@ mathjax: true
 
 <br>
 
-# ggplot 꾸미기
+# geom_text 활용하여 그림 안에 글자 넣기
 
 
 

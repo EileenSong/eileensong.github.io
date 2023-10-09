@@ -1,7 +1,7 @@
 ---
 layout: article
-title: 9. 시계열 자료(Covid data)
-permalink: /notes/kr/R/Ch09_ggplot_9
+title: 11. 그림에 주석 달기
+permalink: /notes/kr/R/Ch11_ggplot_11
 key: notes
 sidebar:
   nav: notes-kr
@@ -17,7 +17,7 @@ mathjax: true
 
 <br>
 
-# Covid data 시계열 자료 활용하기
+# 선, 영역, 문자 이용하여 그림에 주석 달기
 
 
 
