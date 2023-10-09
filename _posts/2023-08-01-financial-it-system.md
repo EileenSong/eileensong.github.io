@@ -1,5 +1,5 @@
 ---
-title: 👍 Self-supervised Learning for Large-scale Item Recommendations
+title: 👍[논문]Self-supervised Learning for Large-scale Item Recommendations
 key: 20230801
 tags: MachineLearning, DeepLearning, SSL, Recommendation
 ---
@@ -17,7 +17,7 @@ ML과 DL에서 나오는 중요한 용어들이 잔뜩 축약되어 있는 논�
 
 ## Authors
 
-Tiansheng Yao, Xinyang Yi, Derek Zhiyuan Cheng, Felix Yu, Ting Chen, Aditya Menon, Lichan Hong, Ed H. Chi, Steve Tjoa, Jieqi (Jay) Kang, Evan Ettinger. Google Inc., United States
+#### Tiansheng Yao, Xinyang Yi, Derek Zhiyuan Cheng, Felix Yu, Ting Chen, Aditya Menon, Lichan Hong, Ed H. Chi, Steve Tjoa, Jieqi (Jay) Kang, Evan Ettinger. Google Inc., United States
 
 저자들은 대부분 google research에서 연구원으로 근무하고 있다. 추천시스템, 자기지도학습, ML, DL 등을 연구하고 있었다. 특히 Ting Chen이라는 분은 이전에 썼던 논문을 기반으로 이 논문에는 contribution 정도로 참여한 것으로 보인다(고 교수님이 설명해주셨다ㅎㅎㅎ).
 
