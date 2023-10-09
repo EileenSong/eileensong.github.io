@@ -1,5 +1,5 @@
 ---
-title: 🏦 금융권 IT 시스템의 구조 정리
+title: 👍 Self-supervised Learning for Large-scale Item Recommendations
 key: 20230801
 tags: MachineLearning, DeepLearning, SSL, Recommendation
 ---
@@ -8,9 +8,10 @@ tags: MachineLearning, DeepLearning, SSL, Recommendation
 
 # Self-supervised Learning for Large-scale Item Recommendations
 
-<br>
 
-#### Tiansheng Yao, Xinyang Yi, Derek Zhiyuan Cheng, Felix Yu, Ting Chen, Aditya Menon, Lichan Hong, Ed H. Chi, Steve Tjoa, Jieqi (Jay) Kang, Evan Ettinger. Google Inc., United States
+ML과 DL에서 나오는 중요한 용어들이 잔뜩 축약되어 있는 논문이다.
+나에겐 읽을 때 너무너무 어려웠지만.. 그래도 한 번 발표하고 나니 애증의 논문이 되었다..ㅎㅎ 내가 이해하려고 적다보니 이 포스팅에는 중복되는 내용도 많을 수 있다. 이 포스팅에서는 **Method 위주로 정리**해보겠다.
+
 
 <br>
 
@@ -28,11 +29,6 @@ Tiansheng Yao, Xinyang Yi, Derek Zhiyuan Cheng, Felix Yu, Ting Chen, Aditya Meno
 <br>
 
 ## Introduction
-
-
-ML과 DL에서 나오는 중요한 용어들이 잔뜩 축약되어 있는 논문이다.
-나에겐 읽을 때 너무너무 어려웠지만.. 그래도 한 번 발표하고 나니 애증의 논문이 되었다..ㅎㅎ 내가 이해하려고 적다보니 이 포스팅에는 중복되는 내용도 많을 수 있다. 이 포스팅에서는 **Method 위주로 정리**해보겠다.
-
 
 기존 시스템에서는 SSL이 사용되지 않았다. 왜냐하면 공용으로 인정될만한 Dataset도 없을 뿐더러, 도메인이 바뀔 때 마다 추천시스템 기능(성능)이 다르기 때문에 사용되기가 어렵다는 단점이 있었다.
 
