@@ -1,6 +1,6 @@
 ---
 title: 👍[논문]Self-supervised Learning for Large-scale Item Recommendations
-key: 20230801
+key: 20231007
 tags: MachineLearning DeepLearning SSL Recommendation
 ---
 
