@@ -34,7 +34,8 @@ library(nlme)에 내장되어 있다.
 - Subject: 소년 ID
 – age : 표준화된 나이 (-1 부터 1 의 값)
 – height: 키(cm)
-– Occasion: 키가 측정된 순서로, 1 은 가장 먼저 측정된 것, 9 는 마지막 측정을 나타는 범주형 변수
+– Occasion: 키가 측정된 순서로, 1 은 가장 먼저 측정된 것,
+9 는 마지막 측정을 나타는 범주형 변수
 ```
 
 
@@ -167,19 +168,118 @@ se 매개변수를 FALSE로 설정하는 것은 부트스트래핑(bootstrap)된
 group 으로 쓰이게 되며 x변수의 범주별로 상자그림을 그린다. 
 
 
-```r
-```
-
-```r
-```
+occasion별로 상자를 그린다. occasion은 수치로 나와있지만 범주형 변수고 순서가 있는 레벨이다. 구래서 boxplot을 그린거다. x는 범주형이고 y는 연속형 변수다.
 
 
 ```r
+ggplot(Oxboys, aes(Occasion, height)) +
+  geom_boxplot()
 ```
+
+![Alt text](img/oxboys7.png)
+
+
+
+
+line을 그려주면, 길이가 길어지는데.. 색상과 alpha를 줘서 선을 나누어 본다. 어디까지가 상자그림 선인지, 라인으로 그린 선인지 보인다.
+
+```r
+ggplot(Oxboys, aes(Occasion, height)) +
+  geom_boxplot()+geom_line(color="red", alpha=0.5)
+```
+
+![Alt text](img/oxboys8.png)
+
+
+각 그룹별로 쪼개져서 occasion 범주별로 나누어서 그림을 그려졌다. line도 범주별로 지정이 된 건데.. 우리가 알고 싶은 것은 각 아이들 별로!!
+
+
+
+그래서, 상자그림 위에 Subject별로 profile line을 상자그림 위에 그리기 위해서는 geom_line에서 따로 group = Subject 지정해야 한다.
 
 
 ```r
+ggplot(Oxboys, aes(Occasion, height)) +
+ geom_boxplot() +
+ geom_line(aes(group = Subject))
 ```
+
+![Alt text](img/oxboys9.png)
+
+이렇게 하면 subject별로 묶여서 그림을 그리게 된다. 
+
+
+
+
+<br>
+
+## 범주형 변수의 group geom
+
+<br>
+범주형 변수로 놓는 경우, 그룹으로 잡혀서 작동하는 geom들이 있다. 박스플랏은 범주형 변수와 수치형 변수 사이의 관계를 탐색할 때 유용하게 쓸 수 있다. 
+
+
+```r
+ggplot(Oxboys, aes(Occasion, height)) +
+  geom_line()
+```
+
+
+![Alt text](img/oxboys10.png)
+
+
+occasion을 하면, 범주별로 나눠서 선을 그린다.
+
+
+
+
+```r
+ggplot(Oxboys, aes(age, height)) +
+  geom_line() 
+```
+
+
+![Alt text](img/oxboys11.png)
+
+
+age와 heigth로 나누면, 라인별로 이어진다.
+
+
+
+
+```r
+ggplot(Oxboys, aes(age, height)) +
+  geom_boxplot() 
+```
+
+박스플랏은 위에서도 언급했듯, 범주형 변수와 수치형 변수 사이의 관계를 탐색할 때 유용하게 쓸 수 있다. 그래서, age와 height는 연속형 변수이기 때문에 아래와 같은 에러가 뜬다. 
+
+Warning message:
+
+Continuous x aesthetic
+
+ℹ did you forget `aes(group = ...)`? 
+
+
+
+![Alt text](img/oxboys12.png)
+
+
+그리고 그림은, 전체 데이터에 대한 값을 boxplot으로 프린트 해준다.
+
+
+
+Occasion별로 그룹을 하고, 상자 위치를 age위치에 둔다. 
+
+```r
+ggplot(Oxboys, aes(age, height)) +
+  geom_boxplot(aes(group=Occasion)) 
+```
+
+![Alt text](img/oxboys13.png)
+
+
+age의 폭만큼 박스의 폭이 그려져있다. 솔직히 이 그림은 잘 모르겠다 ㅋㅋㅋ age가 다른건가..? 시간 순이기 때문에 폭이 같아야하는거 아닌가 모르겠다. 
 
 
 
@@ -187,12 +287,35 @@ group 으로 쓰이게 되며 x변수의 범주별로 상자그림을 그린다.
 
 ## Matching aesthetics to graphic objects
 <br>
+
+
+시각적 요소(예: 점, 선, 막대, 색상 등)와 데이터의 특성(예: 변수)을 연결하거나 매핑하는 과정을 통해 시각화 해본다. 이번에는 칼라가 어떻게 그룹별로 작동하는지 보려고 한다. 
+
+
+
 ```r
+df <- data.frame(x = 1:3, y = 1:3, colour = c(1,3,5))
+ggplot(df, aes(x, y, colour = factor(colour))) +
+  geom_line(aes(group = 1), linewidth = 2) +
+  geom_point(size = 5)
 ```
 
 
+![Alt text](img/oxboys14.png)
+
+
+
+
 ```r
+ggplot(df, aes(x, y, colour = colour)) +
+  geom_line(aes(group = 1), linewidth = 2) +
+  geom_point(size = 5)
 ```
+
+
+![Alt text](img/oxboys15.png)
+
+
 
 
 ```r
@@ -207,6 +330,12 @@ group 으로 쓰이게 되며 x변수의 범주별로 상자그림을 그린다.
 
 ## Surface plots
 <br>
+
+
+공간 내에서 연속 변수들의 상호 작용을 시각적으로 표현하는 데 사용되는 그래픽 방법으로, 주로 3D 공간 내의 데이터를 나타내거나 시각화할 때 사용된다. Surface plot은 특히 두 개의 독립 변수(X와 Y)와 그에 따른 종속 변수(Z) 간의 관계를 보여주는 데 유용하다.
+
+
+특히, 함수 시각화, GIS, 히트맵 등에 쓰일 수 있다. 
 
 ```r
 ```
