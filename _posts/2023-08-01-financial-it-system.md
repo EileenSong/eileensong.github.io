@@ -1,13 +1,10 @@
 ---
 title: 👍[논문]Self-supervised Learning for Large-scale Item Recommendations
 key: 20230801
-tags: MachineLearning, DeepLearning, SSL, Recommendation
+tags: MachineLearning DeepLearning SSL Recommendation
 ---
 
 <br>
-
-# Self-supervised Learning for Large-scale Item Recommendations
-
 
 ML과 DL에서 나오는 중요한 용어들이 잔뜩 축약되어 있는 논문이다.
 나에겐 읽을 때 너무너무 어려웠지만.. 그래도 한 번 발표하고 나니 애증의 논문이 되었다..ㅎㅎ 내가 이해하려고 적다보니 이 포스팅에는 중복되는 내용도 많을 수 있다. 이 포스팅에서는 **Method 위주로 정리**해보겠다.
