@@ -75,6 +75,8 @@ notes-kr:
         url:    /notes/kr/R/Ch09_ggplot_9
       - title:  12. group
         url:    /notes/kr/R/Ch12_ggplot_12
+      - title:  13. group_colour
+        url:    /notes/kr/R/Ch13_ggplot_13
 
 layouts:
   - title: Layouts
