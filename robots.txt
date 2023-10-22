@@ -1,0 +1,5 @@
+User-agent: *
+Allow: /
+
+Disallow: /private/
+Sitemap: http://eileensong.github.io/sitemap.xml

@@ -36,7 +36,7 @@ timezone: # see https://en.wikipedia.org/wiki/List_of_tz_database_time_zones for
 author:
   type      : # "person" (default), "organization"
   name      : Eileen Song
-  url       : eileensong.github.io
+  url       : https://eileensong.github.io/
   avatar    : # path or url of avatar image (square)
   bio       : Eileen, amazing person.
   email     : eileen.hj.s@gmail.com
