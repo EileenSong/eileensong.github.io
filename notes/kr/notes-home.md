@@ -7,7 +7,6 @@ sidebar:
   nav: notes-kr
 ---
 
-> 화면을 확대하거나 ![Alt text](image.png)를 클릭하면 노트 목록이 뜹니다.
 
 
 > 💻 Data Scientist가 되기 위해서 공부한 것들을 정리해 둔 공간입니다
@@ -20,6 +19,8 @@ sidebar:
 ### 📖 다음과 같은 주제가 있습니다
 
 ```
+화면을 확대하거나 ![Alt text](image.png)를 클릭하면 노트 목록이 뜹니다.
+또는,
 아래 주제를 클릭하면 이동할 수 있습니다
 ```
 
@@ -64,6 +65,12 @@ sidebar:
 > [8. 시계열 자료](/R/Ch08_ggplot_8.md)
 
 > [9. ggplot 꾸미기](/R/Ch09_ggplot_9.md)
+
+> [12. group 지정하기](/R/Ch12_ggplot_12.md)
+
+> [13. color로 group 지정하기](/R/Ch13_ggplot_13.md)
+
+
 
 ### ✔️ 업로드 해야하는 것
 #️⃣ 기본 통계
