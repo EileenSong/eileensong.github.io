@@ -18,6 +18,8 @@ mathjax: true
 # Covid data 시계열 자료 활용하기
 
 
+
+
 ## 데이터 시각화
 
 USAcovid 자료를 활용해보려고 한다.
