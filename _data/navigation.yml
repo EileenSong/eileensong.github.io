@@ -52,7 +52,11 @@ notes-kr:
       - title:  7. Resampling with R
         url:    /notes/kr/algorithm/Ch07_resampling_r 
 
-        
+  - title:      Linear Algebra
+    children:
+      - title:  1. 벡터와 행렬
+        url:    /notes/kr/LinearAlgebra/shape
+
   - title:      R Visualization
     children:
       - title:  1. ggplot 기본 다루기
